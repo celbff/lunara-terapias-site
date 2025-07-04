@@ -1,0 +1,778 @@
+/* Reset e configurações básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Gradiente baseado na referência de cores */
+.gradient-bg {
+    background: linear-gradient(135deg, #f5f1e8 0%, #e8f5f0 50%, #a8d5ba 100%);
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    border-radius: 8px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #2c5530;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #4a7c59;
+    transform: translateY(-2px);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #4a7c59, #6ba777);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: #2c5530;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f1e8 0%, #e8f5f0 50%, #a8d5ba 100%);
+    display: flex;
+    align-items: center;
+    padding: 120px 20px 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+    z-index: 2;
+    position: relative;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #2c5530;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #2c5530, #4a7c59);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: #4a7c59;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: #5a6c5d;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+}
+
+.hero-logo {
+    width: 300px;
+    height: 300px;
+    filter: drop-shadow(0 10px 30px rgba(74, 124, 89, 0.3));
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Botões */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4a7c59, #6ba777);
+    color: white;
+    box-shadow: 0 4px 15px rgba(74, 124, 89, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 124, 89, 0.4);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #d4af37, #f4d03f);
+    color: #2c5530;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.btn-highlight {
+    background: linear-gradient(135deg, #6ba777, #4a7c59);
+    color: white;
+    box-shadow: 0 4px 15px rgba(107, 167, 119, 0.3);
+}
+
+.btn-highlight:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(107, 167, 119, 0.4);
+}
+
+/* Seções */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #2c5530;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #4a7c59, #6ba777);
+    border-radius: 2px;
+}
+
+/* Terapias Section */
+.terapias {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fdf9 100%);
+}
+
+.terapia-category {
+    margin-bottom: 4rem;
+}
+
+.category-title {
+    font-size: 1.8rem;
+    color: #2c5530;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.category-title i {
+    color: #4a7c59;
+    font-size: 1.5rem;
+}
+
+.terapia-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.terapia-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(74, 124, 89, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.terapia-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4a7c59, #6ba777);
+}
+
+.terapia-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(74, 124, 89, 0.2);
+}
+
+.terapia-card i {
+    font-size: 2.5rem;
+    color: #4a7c59;
+    margin-bottom: 1rem;
+}
+
+.terapia-card h4 {
+    font-size: 1.3rem;
+    color: #2c5530;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.terapia-card p {
+    color: #5a6c5d;
+    line-height: 1.6;
+}
+
+/* Destaque Lunara Tarô */
+.lunara-taro-highlight {
+    background: linear-gradient(135deg, #4a7c59, #6ba777);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.lunara-taro-highlight::before {
+    content: '✨';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+.highlight-content h4 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.highlight-content p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+}
+
+/* Sobre Section */
+.sobre {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f5f1e8 0%, #e8f5f0 100%);
+}
+
+.sobre-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.sobre-text p {
+    font-size: 1.1rem;
+    color: #5a6c5d;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.beneficios {
+    margin-top: 2rem;
+}
+
+.beneficios h3 {
+    color: #2c5530;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.beneficios ul {
+    list-style: none;
+}
+
+.beneficios li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #5a6c5d;
+}
+
+.beneficios li i {
+    color: #4a7c59;
+}
+
+.sobre-logo {
+    width: 250px;
+    height: 250px;
+    filter: drop-shadow(0 10px 30px rgba(74, 124, 89, 0.3));
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Depoimentos Section */
+.depoimentos {
+    padding: 100px 0;
+    background: white;
+}
+
+.depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.depoimento-card {
+    background: linear-gradient(135deg, #f8fdf9, #ffffff);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 4px solid #4a7c59;
+}
+
+.depoimento-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(74, 124, 89, 0.2);
+}
+
+.depoimento-content p {
+    font-style: italic;
+    color: #5a6c5d;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    position: relative;
+}
+
+.depoimento-content p::before {
+    content: '"';
+    font-size: 3rem;
+    color: #4a7c59;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    opacity: 0.3;
+}
+
+.depoimento-author h4 {
+    color: #2c5530;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.depoimento-author span {
+    color: #4a7c59;
+    font-size: 0.9rem;
+}
+
+/* Contato Section */
+.contato {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f5f1e8 0%, #e8f5f0 100%);
+}
+
+.contato-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contato-info h3 {
+    color: #2c5530;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contato-info p {
+    color: #5a6c5d;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.contato-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contato-item i {
+    font-size: 1.5rem;
+    color: #4a7c59;
+    width: 30px;
+}
+
+.contato-item h4 {
+    color: #2c5530;
+    margin-bottom: 0.5rem;
+}
+
+.contato-item p {
+    color: #5a6c5d;
+    margin: 0;
+}
+
+.social-links {
+    margin-top: 2rem;
+}
+
+.social-links h4 {
+    color: #2c5530;
+    margin-bottom: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #4a7c59, #6ba777);
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(74, 124, 89, 0.4);
+}
+
+/* Formulário */
+.contato-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    color: #2c5530;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid rgba(74, 124, 89, 0.2);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f8fdf9;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #4a7c59;
+    box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Footer */
+.footer {
+    background: #2c5530;
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-logo-img {
+    height: 60px;
+    width: auto;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.footer-logo p {
+    color: rgba(255, 255, 255, 0.8);
+    font-style: italic;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    margin-bottom: 1rem;
+    color: #6ba777;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #6ba777;
+}
+
+.footer-contact p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.5rem;
+}
+
+.footer-contact i {
+    color: #6ba777;
+    margin-right: 0.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(180deg);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.98);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 20px 60px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-logo {
+        width: 200px;
+        height: 200px;
+        margin-top: 2rem;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .sobre-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .contato-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .terapia-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .depoimentos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+}
+

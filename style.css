@@ -776,3 +776,188 @@ body {
     }
 }
 
+
+
+/* Estilos para conteúdo expansível das terapias */
+.terapia-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(74, 124, 89, 0.1);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.terapia-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(74, 124, 89, 0.2);
+}
+
+.terapia-header {
+    padding: 2rem;
+    cursor: pointer;
+    position: relative;
+    border-bottom: 1px solid rgba(74, 124, 89, 0.1);
+    transition: all 0.3s ease;
+}
+
+.terapia-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4a7c59, #6ba777);
+}
+
+.terapia-header:hover {
+    background: rgba(74, 124, 89, 0.05);
+}
+
+.terapia-icon {
+    font-size: 2.5rem;
+    color: #4a7c59;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.terapia-header h4 {
+    font-size: 1.3rem;
+    color: #2c5530;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.expand-icon {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+    color: #4a7c59;
+}
+
+.terapia-header.expanded .expand-icon {
+    transform: rotate(180deg);
+}
+
+.terapia-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    background: #f8fdf9;
+}
+
+.terapia-content.expanded {
+    max-height: 2000px;
+}
+
+.terapia-content-inner {
+    padding: 2rem;
+}
+
+.terapia-content h5 {
+    color: #2c5530;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.terapia-content p {
+    color: #5a6c5d;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.terapia-content ul {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.terapia-content li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #5a6c5d;
+    line-height: 1.6;
+}
+
+.terapia-content li i {
+    color: #4a7c59;
+    margin-top: 0.2rem;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+.terapia-content li strong {
+    color: #2c5530;
+}
+
+.profissional-info {
+    background: linear-gradient(135deg, #f8fdf9, #e8f5f0);
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+    border-left: 4px solid #4a7c59;
+}
+
+.profissional-info h3 {
+    color: #2c5530;
+    margin-bottom: 1rem;
+}
+
+.profissional-info p {
+    margin-bottom: 0.5rem;
+    color: #5a6c5d;
+}
+
+.profissional-info p:first-of-type {
+    font-weight: 600;
+    color: #2c5530;
+    font-size: 1.1rem;
+}
+
+/* Responsividade para conteúdo expansível */
+@media (max-width: 768px) {
+    .terapia-header {
+        padding: 1.5rem;
+    }
+    
+    .terapia-content-inner {
+        padding: 1.5rem;
+    }
+    
+    .terapia-icon {
+        font-size: 2rem;
+    }
+    
+    .terapia-header h4 {
+        font-size: 1.1rem;
+    }
+    
+    .profissional-info {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .terapia-header {
+        padding: 1rem;
+    }
+    
+    .terapia-content-inner {
+        padding: 1rem;
+    }
+    
+    .terapia-icon {
+        font-size: 1.8rem;
+    }
+    
+    .profissional-info {
+        padding: 1rem;
+    }
+}
+

@@ -326,3 +326,46 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Lunara Terapias - Website carregado com sucesso! ✨');
 });
 
+
+
+// Funcionalidade para conteúdo expansível das terapias
+function toggleContent(header) {
+    const content = header.nextElementSibling;
+    const isExpanded = header.classList.contains('expanded');
+    
+    if (isExpanded) {
+        // Recolher
+        header.classList.remove('expanded');
+        content.classList.remove('expanded');
+        content.style.maxHeight = '0';
+    } else {
+        // Expandir
+        header.classList.add('expanded');
+        content.classList.add('expanded');
+        content.style.maxHeight = content.scrollHeight + 'px';
+    }
+}
+
+// Adiciona efeito de hover nos cards de terapia
+document.addEventListener('DOMContentLoaded', function() {
+    const terapiaCards = document.querySelectorAll('.terapia-card');
+    
+    terapiaCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            const header = this.querySelector('.terapia-header');
+            if (!header.classList.contains('expanded')) {
+                this.style.transform = 'translateY(-5px) scale(1.02)';
+            }
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            const header = this.querySelector('.terapia-header');
+            if (!header.classList.contains('expanded')) {
+                this.style.transform = 'translateY(0) scale(1)';
+            }
+        });
+    });
+    
+    console.log('Funcionalidade de conteúdo expansível carregada com sucesso! 🌟');
+});
+

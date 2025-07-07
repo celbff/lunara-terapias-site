@@ -1315,8 +1315,8 @@
             // Test email sending (simulation mode)
             if (typeof emailjs !== 'undefined') {
                 showStatus('✅ EmailJS detectado - Pronto para envio', false);
-                // In production, uncomment the line below and configure EmailJS
-                // sendEmail(data);
+                sendEmail(data); // Agora o envio será feito de verdade
+
             } else {
                 showStatus('⚠️ EmailJS não configurado', true);
             }

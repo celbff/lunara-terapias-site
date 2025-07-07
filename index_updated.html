@@ -16,7 +16,7 @@
     </script>
     
     <!-- EmailJS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -28,7 +28,8 @@
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #f4f1e8 0%, #a8c8b8 100%);
+            min-height: 100vh;
         }
 
         .container {
@@ -39,7 +40,7 @@
 
         /* Header */
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #6b8e7c 0%, #4a6b5c 100%);
             box-shadow: 0 2px 15px rgba(0,0,0,0.1);
             position: fixed;
             width: 100%;
@@ -73,7 +74,7 @@
         }
 
         .nav-link:hover {
-            color: #ffd700;
+            color: #c9b37c;
         }
 
         .hamburger {
@@ -92,7 +93,7 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #6b8e7c 0%, #4a6b5c 100%);
             color: white;
             padding: 150px 0 100px;
             text-align: center;
@@ -172,12 +173,12 @@
         }
 
         .btn-primary {
-            background: #ffd700;
+            background: #c9b37c;
             color: #333;
         }
 
         .btn-primary:hover {
-            background: #ffed4a;
+            background: #d4c189;
             transform: translateY(-2px);
         }
 
@@ -189,7 +190,7 @@
 
         .btn-secondary:hover {
             background: white;
-            color: #667eea;
+            color: #6b8e7c;
         }
 
         /* Sections */
@@ -213,13 +214,14 @@
             transform: translateX(-50%);
             width: 60px;
             height: 3px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #6b8e7c, #4a6b5c);
         }
 
         /* Terapias */
         .terapias {
             padding: 80px 0;
-            background: #f8f9fa;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
         }
 
         .terapia-category {
@@ -229,7 +231,7 @@
         .category-title {
             font-size: 2rem;
             margin-bottom: 2rem;
-            color: #667eea;
+            color: #6b8e7c;
             display: flex;
             align-items: center;
             gap: 15px;
@@ -242,11 +244,12 @@
         }
 
         .terapia-card {
-            background: white;
+            background: rgba(255, 255, 255, 0.8);
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s;
+            backdrop-filter: blur(10px);
         }
 
         .terapia-card:hover {
@@ -303,7 +306,7 @@
         }
 
         .terapia-content h5 {
-            color: #667eea;
+            color: #6b8e7c;
             margin-bottom: 1rem;
         }
 
@@ -321,8 +324,9 @@
 
         /* Depoimentos */
         .depoimentos {
-            background: white;
+            background: rgba(255, 255, 255, 0.5);
             padding: 80px 0;
+            backdrop-filter: blur(10px);
         }
 
         .depoimentos-grid {
@@ -332,12 +336,13 @@
         }
 
         .depoimento-card {
-            background: #f8f9fa;
+            background: rgba(255, 255, 255, 0.7);
             padding: 2rem;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             text-align: center;
             transition: transform 0.3s;
+            backdrop-filter: blur(10px);
         }
 
         .depoimento-card:hover {
@@ -349,7 +354,7 @@
             height: 80px;
             border-radius: 50%;
             margin: 0 auto 1rem;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #6b8e7c, #4a6b5c);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -370,14 +375,14 @@
         }
 
         .cliente-tratamento {
-            color: #667eea;
+            color: #6b8e7c;
             font-size: 0.9rem;
             margin-bottom: 1rem;
             font-style: italic;
         }
 
         .estrelas {
-            color: #ffd700;
+            color: #c9b37c;
             font-size: 1.2rem;
             margin-bottom: 1rem;
         }
@@ -390,7 +395,7 @@
 
         /* Contato */
         .contato {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #6b8e7c 0%, #4a6b5c 100%);
             color: white;
             padding: 80px 0;
         }
@@ -414,7 +419,7 @@
 
         .contato-item i {
             font-size: 1.5rem;
-            color: #ffd700;
+            color: #c9b37c;
         }
 
         .social-links {
@@ -430,7 +435,7 @@
         }
 
         .social-links a:hover {
-            color: #ffd700;
+            color: #c9b37c;
         }
 
         .form-group {
@@ -466,7 +471,7 @@
 
         .btn-secondary.whatsapp-btn:hover {
             background: white;
-            color: #667eea;
+            color: #6b8e7c;
         }
 
         /* Footer */
@@ -493,6 +498,16 @@
 
         .status-indicator.error {
             background: #dc3545;
+        }
+
+        .status-indicator.success {
+            background: #28a745;
+            color: white;
+        }
+
+        .status-indicator.sending {
+            background: #ffc107;
+            color: #333;
         }
 
         /* Responsive */
@@ -569,7 +584,7 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="logo">
-                    <img src="https://hatchcanvas.com/_/assets/ab_vKgRYEYSmeiGv0z--etus/keys//logo_lunara.png" alt="Lunara Terapias" class="logo-img">
+                    <img src="https://hatchcanvas.com/_/assets/ab_vKgRYEYSmeiGv0z--etus/keys//logo_lunara.jpg" alt="Lunara Terapias" class="logo-img">
                 </div>
                 <ul class="nav-menu">
                     <li class="nav-item">
@@ -1103,27 +1118,29 @@
                 
                 <div class="contato-form">
                     <h3>Envie uma Mensagem</h3>
-                    <form id="contactForm">
+                    <form id="contatoForm">
                         <div class="form-group">
-                            <label for="nome">Nome:</label>
-                            <input type="text" id="nome" name="nome" required>
+                            <label for="from_name">Nome:</label>
+                            <input type="text" id="from_name" name="from_name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">E-mail:</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="reply_to">E-mail:</label>
+                            <input type="email" id="reply_to" name="reply_to" required>
                         </div>
                         <div class="form-group">
-                            <label for="telefone">Telefone:</label>
+                            <label for="telefone">Telefone/WhatsApp:</label>
                             <input type="tel" id="telefone" name="telefone">
                         </div>
                         <div class="form-group">
-                            <label for="mensagem">Mensagem:</label>
-                            <textarea id="mensagem" name="mensagem" required></textarea>
+                            <label for="message">Mensagem:</label>
+                            <textarea id="message" name="message" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-                        <button type="button" class="btn btn-secondary whatsapp-btn" onclick="openWhatsAppWithMessage()" style="margin-top: 10px;">
-                            <i class="fab fa-whatsapp"></i> Ou chame no WhatsApp
-                        </button>
+                        <div id="statusMsg" class="status-indicator" style="display: none; margin-top: 15px; padding: 12px; border-radius: 8px; text-align: center;"></div>
+                        <a href="https://wa.me/5516997934558?text=Ol%C3%A1!%20Acabei%20de%20preencher%20o%20formul%C3%A1rio%20no%20site%20e%20gostaria%20de%20conversar%20sobre%20as%20terapias." 
+                           target="_blank" class="btn btn-secondary whatsapp-btn" style="margin-top: 15px; width: 100%; display: inline-flex; justify-content: center;">
+                            <i class="fab fa-whatsapp"></i> Ou fale conosco pelo WhatsApp
+                        </a>
                     </form>
                 </div>
             </div>
@@ -1290,59 +1307,66 @@
             }
         }
 
-        // Contact form submission with enhanced testing
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        // Initialize EmailJS
+        emailjs.init("RF_SmtXIYxnb8plsM");
+
+        // Contact form submission with working EmailJS integration
+        document.getElementById('contatoForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            const formData = new FormData(this);
-            const data = {
-                nome: formData.get('nome'),
-                email: formData.get('email'),
-                telefone: formData.get('telefone'),
-                mensagem: formData.get('mensagem')
-            };
-            
-            // Validate form data
-            if (!data.nome || !data.email || !data.mensagem) {
-                showStatus('❌ Preencha todos os campos obrigatórios', true);
-                return;
-            }
 
-            // Store message in localStorage for WhatsApp integration
-            localStorage.setItem('lastContactMessage', JSON.stringify(data));
-            showStatus('✅ Dados salvos no localStorage', false);
-            
-            // Test email sending (simulation mode)
-            if (typeof emailjs !== 'undefined') {
-                showStatus('✅ EmailJS detectado - Pronto para envio', false);
-                sendEmail(data); // Agora o envio será feito de verdade
+            const status = document.getElementById('statusMsg');
+            status.style.display = 'block';
+            status.textContent = 'Enviando mensagem...';
+            status.className = 'status-indicator sending';
 
-            } else {
-                showStatus('⚠️ EmailJS não configurado', true);
-            }
-            
-            // Show success message
-            showStatus('✅ Formulário processado com sucesso!', false);
-            
-            // Track form submission
-            trackEvent('form_submitted', {
-                form_type: 'contact_form',
-                user_name: data.nome,
-                has_phone: !!data.telefone
-            });
-            
-            // Reset form
-            this.reset();
+            // Send email using EmailJS
+            emailjs.sendForm("service_jg22i2i", "template_umr6ydh", this)
+                .then(() => {
+                    status.textContent = '✅ Mensagem enviada com sucesso!';
+                    status.className = 'status-indicator success';
+                    showStatus('✅ Email enviado com sucesso!', false);
+                    
+                    // Track form submission
+                    trackEvent('form_submitted', {
+                        form_type: 'contact_form',
+                        success: true
+                    });
+                    
+                    // Reset form
+                    document.getElementById('contatoForm').reset();
+                    
+                    // Hide status after 5 seconds
+                    setTimeout(() => {
+                        status.style.display = 'none';
+                    }, 5000);
+                })
+                .catch((error) => {
+                    status.textContent = '❌ Erro ao enviar. Tente novamente.';
+                    status.className = 'status-indicator error';
+                    showStatus('❌ Erro ao enviar email', true);
+                    console.error('Erro EmailJS:', error);
+                    
+                    // Track form submission error
+                    trackEvent('form_submitted', {
+                        form_type: 'contact_form',
+                        success: false,
+                        error: error.text || 'Unknown error'
+                    });
+                    
+                    // Hide status after 5 seconds
+                    setTimeout(() => {
+                        status.style.display = 'none';
+                    }, 5000);
+                });
         });
 
         // EmailJS Configuration and Send Function (Enhanced)
         function sendEmail(data) {
             // Test mode - replace with your actual EmailJS keys
-            const PUBLIC_KEY = "RF_SmtXIYxnb8plsM";
-            const SERVICE_ID = "service_jg22i2i";
-            const TEMPLATE_ID = "template_umr6ydh";
+            const PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+            const SERVICE_ID = "YOUR_SERVICE_ID";
             
-            if (PUBLIC_KEY === "RF_SmtXIYxnb8plsM") {
+            if (PUBLIC_KEY === "YOUR_PUBLIC_KEY") {
                 showStatus('⚠️ Configure suas chaves EmailJS', true);
                 return;
             }
@@ -1406,9 +1430,9 @@
         window.addEventListener('scroll', () => {
             const header = document.querySelector('.header');
             if (window.scrollY > 100) {
-                header.style.background = 'rgba(102, 126, 234, 0.95)';
+                header.style.background = 'rgba(107, 142, 124, 0.95)';
             } else {
-                header.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                header.style.background = 'linear-gradient(135deg, #6b8e7c 0%, #4a6b5c 100%)';
             }
         });
     </script>

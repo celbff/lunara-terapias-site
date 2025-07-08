@@ -13,14 +13,14 @@
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://lunara-terapias-site.netlify.app">
+    <meta property="og:url" content="https://lunaraterapias.com/">
     <meta property="og:title" content="Lunara Terapias - Equilíbrio, Cura e Transformação">
     <meta property="og:description" content="Terapias energéticas, práticas oraculares e tratamentos holísticos para humanos e animais.">
     <meta property="og:image" content="0kVRsHRN4mZyxNq81jrYj">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://lunara-terapias-site.netlify.app">
+    <meta property="twitter:url" content="https://lunaraterapias.com/">
     <meta property="twitter:title" content="Lunara Terapias - Equilíbrio, Cura e Transformação">
     <meta property="twitter:description" content="Terapias energéticas, práticas oraculares e tratamentos holísticos para humanos e animais.">
     <meta property="twitter:image" content="0kVRsHRN4mZyxNq81jrYj">
@@ -55,7 +55,7 @@
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #f5f3ee 0%, #e8f0e8 25%, #d4e4d8 50%, #b8d4c0 75%, #8bb8a6 100%);
+            background: linear-gradient(135deg, #f5f3ee 0%, #ede8e0 20%, #e8f0e8 40%, #d4e4d8 60%, #b8d4c0 80%, #8bb8a6 100%);
             background-attachment: fixed;
             min-height: 100vh;
             overflow-x: hidden;
@@ -990,40 +990,7 @@
             color: #aaa;
         }
 
-        /* Status Indicator */
-        .status-indicator {
-            position: fixed;
-            top: 80px;
-            right: 20px;
-            background: #28a745;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            z-index: 1001;
-            display: none;
-            font-weight: 500;
-            animation: slideIn 0.3s ease;
-        }
 
-        @keyframes slideIn {
-            from { transform: translateX(100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-
-        .status-indicator.error {
-            background: #dc3545;
-        }
-
-        .status-indicator.success {
-            background: #28a745;
-            color: white;
-        }
-
-        .status-indicator.sending {
-            background: #ffc107;
-            color: #333;
-        }
 
         /* WhatsApp Floating Button */
         .whatsapp-float {
@@ -1348,8 +1315,7 @@
 
     <body style="background: linear-gradient(135deg, #fdf28c 0%, #91ffa7 100%);">  <!-- Gradiente ajustado -->
     
-    <!-- Status Indicator -->
-    <div id="statusIndicator" class="status-indicator">✅ Sistema funcionando</div>
+
 
     <!-- WhatsApp Floating Button -->
     <a href="javascript:void(0)" onclick="openWhatsAppWithMessage()" class="whatsapp-float" title="Conversar no WhatsApp" aria-label="Abrir conversa no WhatsApp">
@@ -2393,13 +2359,7 @@
 
     <!-- Scripts -->
     <script>
-        // Status Testing System
-        function showStatus(message, isError = false) {
-            const indicator = document.getElementById('statusIndicator');
-            indicator.textContent = message;
-            indicator.className = isError ? 'status-indicator error' : 'status-indicator success';
-            indicator.style.display = 'block';
-        }
+
 
         // Google Analytics Event Tracking
         function trackEvent(eventName, parameters = {}) {
@@ -2510,17 +2470,7 @@
                 console.error('❌ Mobile menu not found');
             }
 
-            // Show final result
-            const percentage = (testsPassed / totalTests * 100).toFixed(0);
-            if (testsPassed === totalTests) {
-                showStatus(`✅ Sistema 100% funcional (${testsPassed}/${totalTests})`, false);
-            } else if (testsPassed >= totalTests * 0.8) {
-                showStatus(`⚠️ Sistema funcional ${percentage}% (${testsPassed}/${totalTests})`, false);
-            } else {
-                showStatus(`❌ Problemas detectados ${percentage}% (${testsPassed}/${totalTests})`, true);
-            }
 
-            console.log(`🔍 System Status: ${testsPassed}/${totalTests} tests passed (${percentage}%)`);
         });
 
         // Mobile menu toggle with accessibility
@@ -2601,15 +2551,19 @@
                 content.classList.add('active');
                 icon.style.transform = 'rotate(180deg)';
                 
-                // Smooth scroll to ensure content is visible
-                setTimeout(() => {
-                    const headerHeight = document.querySelector('.header').offsetHeight;
-                    const elementTop = element.offsetTop - headerHeight - 20;
+                // Smooth scroll to ensure content is visible, only if not already in view
+                const elementRect = element.getBoundingClientRect();
+                const headerHeight = document.querySelector(".header").offsetHeight;
+                // Calculate target scroll position: element's top minus header height and a small offset
+                const targetScrollTop = window.scrollY + elementRect.top - headerHeight - 20;
+
+                // Only scroll if the element is not fully visible within the viewport (considering header)
+                if (elementRect.top < headerHeight || elementRect.bottom > window.innerHeight) {
                     window.scrollTo({
-                        top: elementTop,
-                        behavior: 'smooth'
+                        top: targetScrollTop,
+                        behavior: "smooth"
                     });
-                }, 300);
+                }
                 
                 trackEvent('therapy_expanded', {
                     therapy_name: terapiaName,
@@ -2656,13 +2610,11 @@
                 .then(() => {
                     status.textContent = '✅ Mensagem enviada com sucesso!';
                     status.className = 'status-indicator success';
-                    showStatus('✅ Email enviado com sucesso!', false);
-                    
                     // Track successful form submission
-                    trackEvent('form_submitted', {
-                        form_type: 'contact_form',
+                    trackEvent("form_submitted", {
+                        form_type: "contact_form",
                         success: true,
-                        therapy_interest: data.terapia_interesse || 'not_specified',
+                        therapy_interest: data.terapia_interesse || "not_specified",
                         has_phone: !!data.telefone
                     });
                     
@@ -2671,30 +2623,29 @@
                     
                     // Show success message with next steps
                     setTimeout(() => {
-                        status.innerHTML = '🎉 Mensagem enviada! Em breve entraremos em contato. <br><small>Você também pode nos chamar no WhatsApp para uma resposta mais rápida.</small>';
+                        status.innerHTML = "🎉 Mensagem enviada! Em breve entraremos em contato. <br><small>Você também pode nos chamar no WhatsApp para uma resposta mais rápida.</small>";
                     }, 2000);
                     
                     // Hide status after 8 seconds
                     setTimeout(() => {
-                        status.style.display = 'none';
+                        status.style.display = "none";
                     }, 8000);
                 })
                 .catch((error) => {
-                    status.textContent = '❌ Erro ao enviar. Tente novamente ou use o WhatsApp.';
-                    status.className = 'status-indicator error';
-                    showStatus('❌ Erro ao enviar email', true);
-                    console.error('Erro EmailJS:', error);
+                    status.textContent = "❌ Erro ao enviar. Tente novamente ou use o WhatsApp.";
+                    status.className = "status-indicator error";
+                    console.error("Erro EmailJS:", error);
                     
                     // Track form submission error
-                    trackEvent('form_submitted', {
-                        form_type: 'contact_form',
+                    trackEvent("form_submitted", {
+                        form_type: "contact_form",
                         success: false,
-                        error_message: error.text || 'Unknown error'
+                        error_message: error.text || "Unknown error"
                     });
                     
                     // Hide status after 6 seconds
                     setTimeout(() => {
-                        status.style.display = 'none';
+                        status.style.display = "none";
                     }, 6000);
                 })
                 .finally(() => {
@@ -2712,27 +2663,23 @@
                 const terapiaText = data.terapia_interesse ? ` Tenho interesse em: ${data.terapia_interesse}.` : '';
                 const phoneText = data.telefone ? ` Meu telefone: ${data.telefone}.` : '';
                 const whatsappMessage = encodeURIComponent(`Olá! Sou ${data.from_name}.${terapiaText}${phoneText} ${data.message}`);
-                const whatsappLink = `https://wa.me/5516997934558?text=${whatsappMessage}`;
-                window.open(whatsappLink, '_blank');
-                showStatus('✅ WhatsApp aberto com sua mensagem', false);
+                const whatsappLink = `https://wa.me/5516997934558?text=${whatsappMessage}`;                window.open(whatsappLink, ", _blank");
                 
                 // Track WhatsApp click with form data
-                trackEvent('whatsapp_clicked', {
-                    source: 'form_data',
+                trackEvent("whatsapp_clicked", {
+                    source: "form_data",
                     user_name: data.from_name,
                     has_therapy_interest: !!data.terapia_interesse,
                     message_length: data.message ? data.message.length : 0
-                });
-            } else {
+                });            } else {
                 // Default WhatsApp message
-                const whatsappLink = `https://wa.me/5516997934558?text=${encodeURIComponent('Olá! Visitei o site da Lunara Terapias e gostaria de saber mais sobre os tratamentos oferecidos.')}`;
-                window.open(whatsappLink, '_blank');
-                showStatus('✅ WhatsApp aberto', false);
+                const whatsappLink = `https://wa.me/5516997934558?text=${encodeURIComponent("Olá! Visitei o site da Lunara Terapias e gostaria de saber mais sobre os tratamentos oferecidos.")}`;
+                window.open(whatsappLink, "_blank");
                 
                 // Track WhatsApp click without form data
-                trackEvent('whatsapp_clicked', {
-                    source: 'direct_click',
-                    message_type: 'default'
+                trackEvent("whatsapp_clicked", {
+                    source: "direct_click",
+                    message_type: "default"
                 });
             }
         }

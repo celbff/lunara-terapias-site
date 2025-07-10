@@ -5,16 +5,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     
-    hamburger.addEventListener('click', function() {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-    
-    // Fecha o menu ao clicar em um link
-    document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-    }));
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Fecha o menu ao clicar em um link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+    }
     
     // Navegação suave
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -37,9 +39,16 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         const scrolled = window.pageYOffset;
         const heroLogo = document.querySelector('.hero-logo');
+        const floatingElements = document.querySelectorAll('.floating-circle, .floating-mandala');
+        
         if (heroLogo) {
-            heroLogo.style.transform = `translateY(${scrolled * 0.3}px)`;
+            heroLogo.style.transform = `translateY(${scrolled * 0.2}px)`;
         }
+        
+        floatingElements.forEach((element, index) => {
+            const speed = 0.1 + (index * 0.05);
+            element.style.transform = `translateY(${scrolled * speed}px)`;
+        });
     });
     
     // Animação de entrada dos elementos
@@ -58,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
     
     // Observa elementos para animação
-    document.querySelectorAll('.terapia-card, .depoimento-card, .sobre-text, .contato-info').forEach(el => {
+    document.querySelectorAll('.terapia-card, .depoimento-card, .sobre-text, .contato-info, .canal-card').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -131,8 +140,8 @@ document.addEventListener('DOMContentLoaded', function() {
             background: ${type === 'success' ? '#4a7c59' : type === 'error' ? '#e74c3c' : '#3498db'};
             color: white;
             padding: 1rem 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
             z-index: 10000;
             max-width: 400px;
             transform: translateX(100%);
@@ -171,62 +180,21 @@ document.addEventListener('DOMContentLoaded', function() {
     // Efeito de hover nos cards de terapia
     document.querySelectorAll('.terapia-card').forEach(card => {
         card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px) scale(1.02)';
+            const header = this.querySelector('.terapia-header');
+            if (!header.classList.contains('expanded')) {
+                this.style.transform = 'translateY(-5px) scale(1.02)';
+            }
         });
         
         card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-    });
-    
-    // Contador animado (se necessário no futuro)
-    function animateCounter(element, target, duration = 2000) {
-        let start = 0;
-        const increment = target / (duration / 16);
-        
-        const timer = setInterval(() => {
-            start += increment;
-            element.textContent = Math.floor(start);
-            
-            if (start >= target) {
-                element.textContent = target;
-                clearInterval(timer);
-            }
-        }, 16);
-    }
-    
-    // Lazy loading para imagens (otimização)
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.remove('lazy');
-                imageObserver.unobserve(img);
+            const header = this.querySelector('.terapia-header');
+            if (!header.classList.contains('expanded')) {
+                this.style.transform = 'translateY(0) scale(1)';
             }
         });
     });
     
-    images.forEach(img => imageObserver.observe(img));
-    
-    // Efeito de typing para o título (opcional)
-    function typeWriter(element, text, speed = 100) {
-        let i = 0;
-        element.textContent = '';
-        
-        function type() {
-            if (i < text.length) {
-                element.textContent += text.charAt(i);
-                i++;
-                setTimeout(type, speed);
-            }
-        }
-        
-        type();
-    }
-    
-    // Scroll to top button (opcional)
+    // Scroll to top button
     const scrollToTopBtn = document.createElement('button');
     scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
     scrollToTopBtn.className = 'scroll-to-top';
@@ -238,14 +206,15 @@ document.addEventListener('DOMContentLoaded', function() {
         color: white;
         border: none;
         border-radius: 50%;
-        width: 50px;
-        height: 50px;
+        width: 55px;
+        height: 55px;
         cursor: pointer;
-        box-shadow: 0 4px 15px rgba(74, 124, 89, 0.3);
+        box-shadow: 0 8px 25px rgba(74, 124, 89, 0.3);
         transition: all 0.3s ease;
         opacity: 0;
         visibility: hidden;
         z-index: 1000;
+        font-size: 1.2rem;
     `;
     
     document.body.appendChild(scrollToTopBtn);
@@ -271,62 +240,17 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Efeito hover no botão scroll to top
     scrollToTopBtn.addEventListener('mouseenter', () => {
-        scrollToTopBtn.style.transform = 'translateY(-3px)';
-        scrollToTopBtn.style.boxShadow = '0 6px 20px rgba(74, 124, 89, 0.4)';
+        scrollToTopBtn.style.transform = 'translateY(-5px) scale(1.1)';
+        scrollToTopBtn.style.boxShadow = '0 12px 30px rgba(74, 124, 89, 0.4)';
     });
     
     scrollToTopBtn.addEventListener('mouseleave', () => {
-        scrollToTopBtn.style.transform = 'translateY(0)';
-        scrollToTopBtn.style.boxShadow = '0 4px 15px rgba(74, 124, 89, 0.3)';
+        scrollToTopBtn.style.transform = 'translateY(0) scale(1)';
+        scrollToTopBtn.style.boxShadow = '0 8px 25px rgba(74, 124, 89, 0.3)';
     });
     
-    // Preloader (opcional)
-    function createPreloader() {
-        const preloader = document.createElement('div');
-        preloader.className = 'preloader';
-        preloader.innerHTML = `
-            <div class="preloader-content">
-                <img src="logo_contorno.png" alt="Lunara" class="preloader-logo">
-                <div class="preloader-spinner"></div>
-            </div>
-        `;
-        
-        preloader.style.cssText = `
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #f5f1e8 0%, #e8f5f0 50%, #a8d5ba 100%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 10000;
-            transition: opacity 0.5s ease;
-        `;
-        
-        document.body.appendChild(preloader);
-        
-        // Remove preloader após carregamento
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                preloader.style.opacity = '0';
-                setTimeout(() => {
-                    if (document.body.contains(preloader)) {
-                        preloader.remove();
-                    }
-                }, 500);
-            }, 1000);
-        });
-    }
-    
-    // Ativa preloader se necessário
-    // createPreloader();
-    
-    console.log('Lunara Terapias - Website carregado com sucesso! ✨');
+    console.log('Lunara Terapias - Website redesenhado carregado com sucesso! ✨');
 });
-
-
 
 // Funcionalidade para conteúdo expansível das terapias
 function toggleContent(header) {
@@ -346,26 +270,117 @@ function toggleContent(header) {
     }
 }
 
-// Adiciona efeito de hover nos cards de terapia
-document.addEventListener('DOMContentLoaded', function() {
-    const terapiaCards = document.querySelectorAll('.terapia-card');
+// Carrossel de Canais
+let currentSlide = 0;
+const totalSlides = 4;
+
+function moveCarousel(direction) {
+    const track = document.querySelector('.carousel-track');
+    const cardWidth = 370; // largura do card + gap
     
-    terapiaCards.forEach(card => {
+    currentSlide += direction;
+    
+    if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;
+    } else if (currentSlide >= totalSlides) {
+        currentSlide = 0;
+    }
+    
+    const translateX = -currentSlide * cardWidth;
+    track.style.transform = `translateX(${translateX}px)`;
+    
+    updateDots();
+}
+
+function currentSlideFunc(slideIndex) {
+    const track = document.querySelector('.carousel-track');
+    const cardWidth = 370;
+    
+    currentSlide = slideIndex - 1;
+    const translateX = -currentSlide * cardWidth;
+    track.style.transform = `translateX(${translateX}px)`;
+    
+    updateDots();
+}
+
+function updateDots() {
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach((dot, index) => {
+        if (index === currentSlide) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
+}
+
+// Auto-play do carrossel
+setInterval(() => {
+    moveCarousel(1);
+}, 5000);
+
+// Touch/Swipe support para mobile
+let startX = 0;
+let endX = 0;
+
+document.addEventListener('touchstart', e => {
+    startX = e.changedTouches[0].screenX;
+});
+
+document.addEventListener('touchend', e => {
+    endX = e.changedTouches[0].screenX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    const threshold = 50;
+    const diff = startX - endX;
+    
+    if (Math.abs(diff) > threshold) {
+        if (diff > 0) {
+            // Swipe left - próximo slide
+            moveCarousel(1);
+        } else {
+            // Swipe right - slide anterior
+            moveCarousel(-1);
+        }
+    }
+}
+
+// Animações adicionais para os cards de canal
+document.addEventListener('DOMContentLoaded', function() {
+    const canalCards = document.querySelectorAll('.canal-card');
+    
+    canalCards.forEach((card, index) => {
+        // Animação de entrada escalonada
+        setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }, index * 200);
+        
+        // Efeito de hover aprimorado
         card.addEventListener('mouseenter', function() {
-            const header = this.querySelector('.terapia-header');
-            if (!header.classList.contains('expanded')) {
-                this.style.transform = 'translateY(-5px) scale(1.02)';
-            }
+            this.style.transform = 'translateY(-15px) scale(1.03)';
+            this.style.boxShadow = '0 25px 50px rgba(74, 124, 89, 0.25)';
         });
         
         card.addEventListener('mouseleave', function() {
-            const header = this.querySelector('.terapia-header');
-            if (!header.classList.contains('expanded')) {
+            if (!this.classList.contains('featured')) {
                 this.style.transform = 'translateY(0) scale(1)';
+            } else {
+                this.style.transform = 'scale(1.05)';
             }
+            this.style.boxShadow = '0 15px 35px rgba(0, 0, 0, 0.1)';
         });
     });
     
-    console.log('Funcionalidade de conteúdo expansível carregada com sucesso! 🌟');
+    // Inicializa os cards como invisíveis para animação
+    canalCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'all 0.6s ease';
+    });
 });
 
+// Função para o currentSlide (corrigindo nome)
+window.currentSlide = currentSlideFunc;

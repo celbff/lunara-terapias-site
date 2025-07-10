@@ -466,10 +466,6 @@ body {
     background: linear-gradient(135deg, #ff0000, #cc0000);
 }
 
-.canal-icon.instagram {
-    background: linear-gradient(135deg, #e4405f, #833ab4);
-}
-
 .canal-icon.whatsapp {
     background: linear-gradient(135deg, #25d366, #128c7e);
 }
@@ -552,18 +548,6 @@ body {
     color: #ff0000;
     font-size: 1.2rem;
     animation: pulse 2s ease-in-out infinite;
-}
-
-.instagram-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5px;
-    height: 100%;
-}
-
-.insta-post {
-    background: linear-gradient(135deg, #e4405f, #833ab4);
-    border-radius: 5px;
 }
 
 .whatsapp-chat {
@@ -782,6 +766,41 @@ body {
 
 .terapia-content li strong {
     color: var(--dark-green);
+}
+
+/* Imagens das terapias */
+.terapia-image {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.therapy-img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(74, 124, 89, 0.2);
+    transition: all 0.3s ease;
+}
+
+.therapy-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(74, 124, 89, 0.3);
+}
+
+.terapia-content h5 {
+    color: var(--dark-green);
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-left: 3px solid var(--deep-teal);
+    padding-left: 1rem;
+}
+
+.terapia-content h5:first-of-type {
+    margin-top: 0;
 }
 
 /* Sobre Section */

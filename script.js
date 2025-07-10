@@ -272,7 +272,7 @@ function toggleContent(header) {
 
 // Carrossel de Canais
 let currentSlide = 0;
-const totalSlides = 4;
+const totalSlides = 3;
 
 function moveCarousel(direction) {
     const track = document.querySelector('.carousel-track');

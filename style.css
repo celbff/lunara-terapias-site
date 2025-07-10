@@ -1168,6 +1168,17 @@ body {
     }
 }
 
+@keyframes whatsappPulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+    }
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .hamburger {

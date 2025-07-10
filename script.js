@@ -104,9 +104,15 @@ document.addEventListener('DOMContentLoaded', function() {
             submitButton.textContent = 'Enviando...';
             submitButton.disabled = true;
             
-            // Simula delay de envio
+            // Simula envio real - aqui você pode integrar com um serviço de email
             setTimeout(() => {
-                showNotification('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
+                // Cria link mailto como fallback
+                const mailtoLink = `mailto:celsot.holistics@gmail.com?subject=Contato do Site - ${data.nome}&body=Nome: ${data.nome}%0D%0AEmail: ${data.email}%0D%0ATelefone: ${data.telefone || 'Não informado'}%0D%0ATerapia de Interesse: ${data.terapia || 'Não especificada'}%0D%0A%0D%0AMensagem:%0D%0A${data.mensagem}`;
+                
+                // Abre cliente de email
+                window.location.href = mailtoLink;
+                
+                showNotification('Redirecionando para seu cliente de email...', 'success');
                 this.reset();
                 submitButton.textContent = originalText;
                 submitButton.disabled = false;

@@ -1,0 +1,17 @@
+{
+  "name": "lunara-terapias",
+  "version": "1.0.0",
+  "description": "Website para Lunara Terapias - Equilíbrio, Cura e Transformação",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve . -p 3000",
+    "start": "npx serve . -p 3000",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "keywords": ["terapias", "holistic", "reiki", "tarot", "wellness"],
+  "author": "Lunara Terapias",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}

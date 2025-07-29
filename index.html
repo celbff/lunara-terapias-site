@@ -1,0 +1,3410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunara Terapias - Equilíbrio, Cura e Transformação</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Lunara Terapias oferece terapias energéticas, práticas oraculares e tratamentos holísticos para humanos e animais em Araraquara, SP. Reiki, Biomagnetismo, Cartomancia e muito mais.">
+    <meta name="keywords" content="terapias energéticas, reiki, biomagnetismo, cartomancia, tarô, apometria, radiestesia, araraquara, terapias holísticas, cura energética">
+    <meta name="author" content="Celso - Lunara Terapias">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lunaraterapias.com/">
+    <meta property="og:title" content="Lunara Terapias - Equilíbrio, Cura e Transformação">
+    <meta property="og:description" content="Terapias energéticas, práticas oraculares e tratamentos holísticos para humanos e animais.">
+    <meta property="og:image" content="assets/B0Xd0JpZuzOL9b3cDHk7E.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lunaraterapias.com/">
+    <meta property="twitter:title" content="Lunara Terapias - Equilíbrio, Cura e Transformação">
+    <meta property="twitter:description" content="Terapias energéticas, práticas oraculares e tratamentos holísticos para humanos e animais.">
+    <meta property="twitter:image" content="assets/B0Xd0JpZuzOL9b3cDHk7E.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLZBB3EN7X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-PLZBB3EN7X');
+    </script>
+    
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/B0Xd0JpZuzOL9b3cDHk7E.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f1e8 0%, #e8f5f0 50%, #a8d5ba 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .navbar {
+            padding: 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+            transition: transform 0.3s ease;
+        }
+
+        .logo-img:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            list-style: none;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            display: block;
+        }
+
+        .nav-link:hover {
+            color: #c9b37c;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f5f1e8 0%, #e8f5f0 25%, #d4e4d8 50%, #a8d5ba 75%, #8bb8a6 100%);
+            color: #2c5530;
+            padding: 150px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="stars" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23stars)"/></svg>');
+            opacity: 0.3;
+            animation: twinkle 4s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            flex: 1;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 400px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero-logo {
+            max-width: 300px;
+            height: auto;
+            opacity: 0.9;
+            animation: float 6s ease-in-out infinite;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-10px) rotate(1deg); }
+            66% { transform: translateY(-5px) rotate(-1deg); }
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #2c5530;
+            text-shadow: 2px 2px 4px rgba(44, 85, 48, 0.1);
+            animation: titleGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes titleGlow {
+            from { filter: drop-shadow(0 0 10px rgba(201, 179, 124, 0.3)); }
+            to { filter: drop-shadow(0 0 20px rgba(201, 179, 124, 0.6)); }
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            color: #4a7c59;
+            text-shadow: 1px 1px 2px rgba(74, 124, 89, 0.1);
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            color: #2c5530;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #c9b37c, #d4c189);
+            color: #333;
+            box-shadow: 0 4px 15px rgba(201, 179, 124, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #d4c189, #e0ce96);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(201, 179, 124, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #2c5530;
+            border: 2px solid #2c5530;
+            box-shadow: 0 4px 15px rgba(44, 85, 48, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: #2c5530;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(44, 85, 48, 0.4);
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+            position: relative;
+            font-weight: 600;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, #2c5530, #4a7c59);
+            border-radius: 2px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 1px;
+            background: linear-gradient(135deg, transparent, #2c5530, transparent);
+        }
+
+        /* Terapias */
+        .terapias {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            position: relative;
+        }
+
+        .terapias::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="therapy-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(95,132,113,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23therapy-pattern)"/></svg>');
+            opacity: 0.5;
+        }
+
+        .terapia-category {
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .category-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #2c5530;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .category-title i {
+            font-size: 2.2rem;
+            background: linear-gradient(135deg, #2c5530, #c9b37c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .terapia-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .terapia-card {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+
+        .terapia-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #5f8471, #c9b37c, #5f8471);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .terapia-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .terapia-card:hover::before {
+            opacity: 1;
+        }
+
+        .terapia-header {
+            padding: 2rem;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .terapia-header:hover {
+            background: rgba(44, 85, 48, 0.05);
+        }
+
+        .terapia-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 15px;
+            object-fit: cover;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            z-index: 2;
+            position: relative;
+        }
+
+        .terapia-header:hover .terapia-image {
+            transform: scale(1.05);
+        }
+
+        .terapia-info {
+            flex: 1;
+            z-index: 3;
+            position: relative;
+            width: 100%;
+        }
+
+        .terapia-header h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 600;
+        }
+
+        .expand-icon {
+            font-size: 1rem;
+            transition: transform 0.3s ease;
+            color: #2c5530;
+            margin-left: 10px;
+        }
+
+        .terapia-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            background: rgba(245, 243, 238, 0.5);
+        }
+
+        .terapia-content.active {
+            max-height: 2000px;
+            transition: max-height 0.6s ease-in;
+        }
+
+        .terapia-content-inner {
+            padding: 0 2rem 2rem;
+        }
+
+        .terapia-content h5 {
+            color: #2c5530;
+            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .terapia-content h5:first-child {
+            margin-top: 1rem;
+        }
+
+        .terapia-content p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .terapia-content ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+
+        .terapia-content li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .terapia-content li i {
+            color: #2c5530;
+            margin-top: 3px;
+            font-size: 0.9rem;
+        }
+
+        .terapia-content strong {
+            color: #333;
+            font-weight: 600;
+        }
+
+        /* Sobre Section */
+        .sobre {
+            background: rgba(255, 255, 255, 0.25);
+            padding: 80px 0;
+            backdrop-filter: blur(5px);
+        }
+
+        .sobre-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .sobre-image {
+            text-align: center;
+        }
+
+        .sobre-image img {
+            max-width: 300px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .sobre-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .sobre-text h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #2c5530;
+            font-weight: 600;
+        }
+
+        .sobre-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        .sobre-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .highlight-item {
+            background: rgba(255, 255, 255, 0.6);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .highlight-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .highlight-item i {
+            font-size: 2rem;
+            color: #2c5530;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .highlight-item p {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 0;
+        }
+
+        /* Depoimentos */
+        .depoimentos {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 80px 0;
+            backdrop-filter: blur(5px);
+            position: relative;
+        }
+
+        .depoimentos::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="testimonial-pattern" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M25,5 Q40,20 25,35 Q10,20 25,5" fill="rgba(201,179,124,0.03)"/></pattern></defs><rect width="100" height="100" fill="url(%23testimonial-pattern)"/></svg>');
+            opacity: 0.5;
+        }
+
+        .depoimentos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .depoimento-card {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .depoimento-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(201, 179, 124, 0.1), transparent);
+            transform: rotate(45deg);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .depoimento-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .depoimento-card:hover::before {
+            opacity: 1;
+        }
+
+        .cliente-foto {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            background: linear-gradient(135deg, #2c5530, #4a7c59);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 2;
+        }
+
+        .cliente-nome {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .cliente-local {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+
+        .cliente-tratamento {
+            color: #2c5530;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .estrelas {
+            color: #c9b37c;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .depoimento-texto {
+            font-style: italic;
+            color: #555;
+            line-height: 1.8;
+            position: relative;
+            font-size: 1rem;
+        }
+
+        .depoimento-texto::before {
+            content: '"';
+            font-size: 3rem;
+            color: #c9b37c;
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            font-family: Georgia, serif;
+            opacity: 0.3;
+        }
+
+        .depoimento-texto::after {
+            content: '"';
+            font-size: 3rem;
+            color: #c9b37c;
+            position: absolute;
+            bottom: -20px;
+            right: -10px;
+            font-family: Georgia, serif;
+            opacity: 0.3;
+        }
+
+        /* Contato */
+        .contato {
+            background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .contato::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="contact-pattern" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="15" cy="15" r="2" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23contact-pattern)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .contato-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contato-info h3 {
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #c9b37c;
+        }
+
+        .contato-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .contato-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(5px);
+        }
+
+        .contato-item i {
+            font-size: 1.5rem;
+            color: #c9b37c;
+            width: 30px;
+            text-align: center;
+        }
+
+        .contato-item span {
+            font-size: 1.1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        .social-links a:hover {
+            color: #c9b37c;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .contato-form h3 {
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #c9b37c;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #f0f0f0;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            resize: vertical;
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #c9b37c;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(201, 179, 124, 0.2);
+        }
+
+        .form-group select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 16px;
+            padding-right: 40px;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .btn-form {
+            background: linear-gradient(135deg, #c9b37c, #d4c189);
+            color: #333;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            margin-bottom: 1rem;
+        }
+
+        .btn-form:hover {
+            background: linear-gradient(135deg, #d4c189, #e0ce96);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(201, 179, 124, 0.4);
+        }
+
+        .btn-secondary.whatsapp-btn {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            width: 100%;
+            text-align: center;
+            padding: 15px 30px;
+            margin-top: 1rem;
+        }
+
+        .btn-secondary.whatsapp-btn:hover {
+            background: white;
+            color: #2c5530;
+        }
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 3rem 0 2rem;
+            position: relative;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #c9b37c;
+            font-weight: 600;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #c9b37c;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #555;
+            padding-top: 2rem;
+        }
+
+        .footer-bottom p {
+            margin: 0.5rem 0;
+            color: #aaa;
+        }
+
+        /* Status Indicator */
+        .status-indicator {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 1001;
+            display: none;
+            font-weight: 500;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .status-indicator.error {
+            background: #dc3545;
+        }
+
+        .status-indicator.success {
+            background: #28a745;
+            color: white;
+        }
+
+        .status-indicator.sending {
+            background: #ffc107;
+            color: #333;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #20ba5a;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 120px;
+            right: 40px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #2c5530, #4a7c59);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            background: linear-gradient(135deg, #4a7c59, #2c5530);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+                padding: 2rem 0;
+                backdrop-filter: blur(10px);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-item {
+                margin: 0.5rem 0;
+            }
+
+            .hero {
+                flex-direction: column;
+                padding: 120px 0 80px;
+                min-height: auto;
+            }
+
+            .hero-content {
+                order: 2;
+                margin-top: 2rem;
+            }
+
+            .hero-image {
+                order: 1;
+                margin-bottom: 2rem;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .terapia-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .terapia-image {
+                width: 80px;
+                height: 80px;
+            }
+
+            .sobre-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .sobre-image {
+                order: 2;
+            }
+
+            .sobre-text {
+                order: 1;
+            }
+
+            .depoimentos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contato-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+                font-size: 25px;
+            }
+
+            .scroll-top {
+                bottom: 90px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 1rem;
+            }
+
+            .status-indicator {
+                top: 70px;
+                right: 10px;
+                left: 10px;
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .nav-container {
+                padding: 1rem 1.5rem;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .category-title {
+                font-size: 1.5rem;
+            }
+
+            .terapia-header {
+                padding: 1.5rem;
+            }
+
+            .terapia-image {
+                width: 70px;
+                height: 70px;
+            }
+
+            .depoimento-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .contato-grid {
+                gap: 2rem;
+            }
+
+            .btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+        }
+
+        /* Canais Section */
+        .canais {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 80px 0;
+            backdrop-filter: blur(5px);
+            position: relative;
+        }
+
+        .canais::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="canais-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(95,132,113,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23canais-pattern)"/></svg>');
+            opacity: 0.5;
+        }
+
+        /* Carousel styles */
+        .canais-carousel {
+            position: relative;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+
+        .carousel-container {
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: 300%; /* 3 cards × 100% */
+        }
+
+        .canal-card {
+            width: 33.333%; /* Each card takes 1/3 of track width */
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 0 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .canal-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .canal-card.featured {
+            background: linear-gradient(135deg, rgba(201, 179, 124, 0.2), rgba(95, 132, 113, 0.2));
+            border: 2px solid rgba(201, 179, 124, 0.3);
+        }
+
+        .canal-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2c5530, #4a7c59);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .canal-icon.youtube {
+            background: linear-gradient(135deg, #ff0000, #cc0000);
+        }
+
+        .canal-icon.whatsapp {
+            background: linear-gradient(135deg, #25d366, #20ba5a);
+        }
+
+        .canal-content {
+            flex: 1;
+        }
+
+        .canal-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #2c5530;
+        }
+
+        .canal-content p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .canal-features {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-tag {
+            background: rgba(44, 85, 48, 0.1);
+            color: #2c5530;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .btn-canal {
+            background: linear-gradient(135deg, #2c5530, #4a7c59);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-canal:hover {
+            background: linear-gradient(135deg, #4a7c59, #2c5530);
+            transform: translateY(-2px);
+        }
+
+        .canal-preview {
+            width: 120px;
+            height: 120px;
+            border-radius: 15px;
+            background: rgba(44, 85, 48, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .tarot-cards {
+            display: flex;
+            gap: 5px;
+        }
+
+        .card {
+            width: 25px;
+            height: 35px;
+            background: linear-gradient(135deg, #c9b37c, #d4c189);
+            border-radius: 3px;
+            border: 1px solid rgba(44, 85, 48, 0.2);
+            position: relative;
+        }
+
+        .card-2 {
+            transform: rotate(10deg);
+        }
+
+        .card-3 {
+            transform: rotate(-10deg);
+        }
+
+        .video-preview {
+            width: 80px;
+            height: 60px;
+            background: #333;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: #333;
+        }
+
+        .whatsapp-chat {
+            text-align: center;
+        }
+
+        .chat-bubble {
+            background: #25d366;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            display: inline-block;
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        .carousel-btn {
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .carousel-btn:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(44, 85, 48, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: #2c5530;
+            transform: scale(1.2);
+        }
+
+        /* Mobile carousel adjustments */
+        @media (max-width: 768px) {
+            .canal-card {
+                width: calc(33.333% - 1rem); /* Account for margins */
+                margin: 0 0.5rem;
+                padding: 1.5rem;
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .canal-content {
+                text-align: center;
+            }
+
+            .canal-preview {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .canal-card {
+                margin: 0 0.25rem;
+                padding: 1rem;
+            }
+
+            .canal-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+
+            .canal-content h3 {
+                font-size: 1.2rem;
+            }
+
+            .canal-content p {
+                font-size: 0.9rem;
+            }
+
+            .canal-preview {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #2c5530, #4a7c59);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #4a7c59, #2c5530);
+        }
+
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Focus styles for accessibility */
+        .btn:focus,
+        .nav-link:focus,
+        input:focus,
+        textarea:focus,
+        button:focus {
+            outline: 2px solid #c9b37c;
+            outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+            .header,
+            .whatsapp-float,
+            .scroll-top,
+            .status-indicator {
+                display: none !important;
+            }
+
+            body {
+                background: white !important;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Status Indicator -->
+    <div id="statusIndicator" class="status-indicator">✅ Sistema funcionando</div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="javascript:void(0)" onclick="openWhatsAppWithMessage()" class="whatsapp-float" title="Conversar no WhatsApp" aria-label="Abrir conversa no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" onclick="scrollToTop()" title="Voltar ao topo" aria-label="Voltar ao topo da página">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar" role="navigation" aria-label="Menu principal">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="assets/B0Xd0JpZuzOL9b3cDHk7E.png" alt="Lunara Terapias - Logo" class="logo-img">
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#terapias" class="nav-link">Terapias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#sobre" class="nav-link">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#depoimentos" class="nav-link">Depoimentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#canais" class="nav-link">Canais</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contato" class="nav-link">Contato</a>
+                    </li>
+                </ul>
+                <div class="hamburger" aria-label="Menu mobile" role="button" tabindex="0">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Lunara Terapias</h1>
+            <p class="hero-subtitle">Equilíbrio, Cura e Transformação através das Terapias Integrativas</p>
+            <p class="hero-description">Bem-vindo à Lunara Terapias, onde tradição e inovação se encontram para promover seu bem-estar integral. Ofereço uma ampla gama de terapias energéticas, práticas oraculares e tratamentos holísticos para humanos e animais, sempre com dedicação, conhecimento e amor.</p>
+            <div class="hero-buttons">
+                <a href="#terapias" class="btn btn-primary" onclick="trackEvent('cta_click', {button_name: 'conheca_terapias', location: 'hero'})">
+                    <i class="fas fa-heart"></i> Conheça as Terapias
+                </a>
+                <a href="https://bit.ly/lunarataro" target="_blank" class="btn btn-secondary" onclick="trackEvent('cta_click', {button_name: 'lunara_taro', location: 'hero'})">
+                    <i class="fas fa-magic"></i> Lunara Tarô
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="assets/B0Xd0JpZuzOL9b3cDHk7E.png" alt="Símbolo Lunara - Energia e Equilíbrio" class="hero-logo">
+        </div>
+    </section>
+
+    <!-- Terapias Section -->
+    <section id="terapias" class="terapias">
+        <div class="container">
+            <h2 class="section-title">Nossas Terapias</h2>
+            
+            <!-- Terapias Energéticas -->
+            <div class="terapia-category">
+                <h3 class="category-title">
+                    <i class="fas fa-hands"></i>
+                    Terapias Energéticas
+                </h3>
+                <div class="terapia-grid">
+                    <!-- Reiki Usui -->
+                    <div class="terapia-card">
+                        <div class="terapia-header" onclick="toggleContent(this)">
+                            <img src="assets/reiki_usui.png?prompt=Ilustração de mãos emanando energia dourada em formato de símbolo Reiki, fundo sereno com tons de azul e dourado, estilo zen minimalista" alt="Reiki Usui" class="terapia-image">
+                            <div class="terapia-info">
+                                <h4>
+                                    Reiki Usui
+                                    <i class="fas fa-chevron-down expand-icon"></i>
+                                </h4>
+                                <p>Técnica japonesa tradicional de canalização de energia universal para promover relaxamento e cura natural através da imposição das mãos.</p>
+                            </div>
+                        </div>
+                        <div class="terapia-content">
+                            <div class="terapia-content-inner">
+                                <h5>O que é o Reiki Usui?</h5>
+                                <p>O Reiki Usui é a forma tradicional de Reiki desenvolvida por Mikao Usui no Japão no início do século XX. É uma técnica de cura energética que utiliza a imposição das mãos para canalizar energia universal (Ki) para promover o equilíbrio e a cura natural do corpo, mente e espírito.</p>
+                                
+                                <h5>Como funciona?</h5>
+                                <p>Durante uma sessão, o praticante coloca as mãos em posições específicas sobre ou próximo ao corpo do receptor, permitindo que a energia flua naturalmente para onde é mais necessária. Não há manipulação física, apenas o toque suave ou a proximidade das mãos, criando um ambiente de profundo relaxamento e cura.</p>
+                                
+                                <h5>Benefícios do Reiki Usui:</h5>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Relaxamento profundo e redução significativa do estresse</li>
+                                    <li><i class="fas fa-check-circle"></i> Equilíbrio energético e harmonização dos chakras</li>
+                                    <li><i class="fas fa-check-circle"></i> Melhoria da qualidade do sono e redução da insônia</li>
+                                    <li><i class="fas fa-check-circle"></i> Alívio de dores físicas e tensões musculares</li>
+                                    <li><i class="fas fa-check-circle"></i> Fortalecimento do sistema imunológico</li>
+                                    <li><i class="fas fa-check-circle"></i> Diminuição da ansiedade e sintomas depressivos</li>
+                                    <li><i class="fas fa-check-circle"></i> Aumento da clareza mental e foco</li>
+                                    <li><i class="fas fa-check-circle"></i> Aceleração de processos de cura natural</li>
+                                </ul>
+                                
+                                <h5>Para quem é indicado?</h5>
+                                <p>Pessoas com estresse e ansiedade, quem busca relaxamento profundo, indivíduos em processo de cura física ou emocional, pessoas interessadas em autoconhecimento e desenvolvimento espiritual, como complemento a tratamentos médicos convencionais, e qualquer pessoa que deseje promover seu bem-estar integral.</p>
+                                
+                                <h5>Duração e frequência:</h5>
+                                <p>As sessões têm duração de 60 a 90 minutos. A frequência pode variar conforme a necessidade individual, podendo ser semanal, quinzenal ou conforme orientação personalizada.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reiki Elemental -->
+                    <div class="terapia-card">
+                        <div class="terapia-header" onclick="toggleContent(this)">
+                            <img src="assets/reiki_elemental.png?prompt=Ilustração dos quatro elementos da natureza (terra, água, fogo, ar) em harmonia com energia Reiki dourada, símbolos elementais místicos, cores terrosas e vibrantes" alt="Reiki Elemental" class="terapia-image">
+                            <div class="terapia-info">
+                                <h4>
+                                    Reiki Elemental
+                                    <i class="fas fa-chevron-down expand-icon"></i>
+                                </h4>
+                                <p>Modalidade de Reiki que trabalha com as energias dos quatro elementos da natureza: terra, água, fogo e ar para equilibrio profundo.</p>
+                            </div>
+                        </div>
+                        <div class="terapia-content">
+                            <div class="terapia-content-inner">
+                                <h5>O que é o Reiki Elemental?</h5>
+                                <p>O Reiki Elemental é uma modalidade especial que combina a energia universal do Reiki tradicional com as forças primordiais dos quatro elementos da natureza. Esta prática reconhece que cada elemento possui qualidades únicas de cura e transformação, oferecendo um trabalho energético mais específico e direcionado.</p>
+                                
+                                <h5>Os Quatro Elementos e suas propriedades:</h5>
+                                <ul>
+                                    <li><i class="fas fa-mountain"></i> <strong>Terra:</strong> Estabilidade, enraizamento, força física e material, conexão com a realidade</li>
+                                    <li><i class="fas fa-tint"></i> <strong>Água:</strong> Fluidez, emoções, intuição, purificação e limpeza energética</li>
+                                    <li><i class="fas fa-fire"></i> <strong>Fogo:</strong> Transformação, paixão, energia vital, coragem e motivação</li>
+                                    <li><i class="fas fa-wind"></i> <strong>Ar:</strong> Comunicação, pensamento, criatividade, liberdade e expansão mental</li>
+                                </ul>
+                                
+                                <h5>Como funciona a sessão?</h5>
+                                <p>O terapeuta identifica quais elementos estão desequilibrados no receptor e direciona especificamente as energias necessárias. Pode incluir visualizações, uso de cristais relacionados aos elementos, e técnicas específicas para cada elemento.</p>
+                                
+                                <h5>Benefícios específicos:</h5>
+                                <ul>
+                                    <li><i class="fas fa-leaf"></i> Conexão mais profunda com a natureza e ciclos naturais</li>
+                                    <li><i class="fas fa-leaf"></i> Equilíbrio entre aspectos físicos, emocionais, mentais e espirituais</li>
+                                    <li><i class="fas fa-leaf"></i> Harmonização de temperamentos e aspectos da personalidade</li>
+                                    <li><i class="fas fa-leaf"></i> Fortalecimento da intuição e percepção energética</li>
+                                    <li><i class="fas fa-leaf"></i> Trabalho específico com questões relacionadas a cada elemento</li>
+                                    <li><i class="fas fa-leaf"></i> Maior estabilidade emocional e mental</li>
+                                </ul>
+                                
+                                <h5>Indicações específicas:</h5>
+                                <p>Pessoas que se sentem desconectadas da natureza, desequilíbrios emocionais específicos, necessidade de enraizamento ou estabilidade, bloqueios criativos, questões de comunicação, e para quem busca um trabalho energético mais direcionado e profundo.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reiki Pet -->
+                    <div class="terapia-card">
+                        <div class="terapia-header" onclick="toggleContent(this)">
+                            <img src="assets/reiki_pet.png?prompt=Ilustração de mãos emanando energia curativa sobre um cão e gato serenos, luz dourada envolvendo os animais, ambiente tranquilo e amoroso, cores suaves" alt="Reiki Pet" class="terapia-image">
+                            <div class="terapia-info">
+                                <h4>
+                                    Reiki Pet (Animais)
+                                    <i class="fas fa-chevron-down expand-icon"></i>
+                                </h4>
+                                <p>Aplicação especializada do Reiki para cães, gatos e outros animais de estimação, promovendo bem-estar animal com técnicas adaptadas.</p>
+                            </div>
+                        </div>
+                        <div class="terapia-content">
+                            <div class="terapia-content-inner">
+                                <h5>O que é o Reiki Pet?</h5>
+                                <p>O Reiki Pet é a aplicação da energia Reiki especificamente adaptada para animais. Os animais são naturalmente receptivos à energia e frequentemente respondem de forma muito positiva ao tratamento energético, muitas vezes de maneira mais rápida e intuitiva que os humanos.</p>
+                                
+                                <h5>Como é aplicado?</h5>
+                                <p>O Reiki para animais é aplicado de forma mais suave e intuitiva, respeitando completamente o temperamento e as necessidades específicas de cada animal. Pode ser feito com toque direto (se o animal permitir e se sentir confortável) ou à distância, sempre seguindo o ritmo, personalidade e conforto do pet. A sessão é conduzida em ambiente familiar ao animal.</p>
+                                
+                                <h5>Benefícios para os animais:</h5>
+                                <ul>
+                                    <li><i class="fas fa-heart"></i> Redução significativa de ansiedade e estresse</li>
+                                    <li><i class="fas fa-heart"></i> Melhoria do comportamento agressivo ou medroso</li>
+                                    <li><i class="fas fa-heart"></i> Aceleração da recuperação pós-cirúrgica</li>
+                                    <li><i class="fas fa-heart"></i> Alívio de dores crônicas e artríticas</li>
+                                    <li><i class="fas fa-heart"></i> Fortalecimento do sistema imunológico</li>
+                                    <li><i class="fas fa-heart"></i> Melhoria da qualidade do sono</li>
+                                    <li><i class="fas fa-heart"></i> Aumento do apetite e vitalidade</li>
+                                </ul>
+                                
+                                <h5>Indicações específicas:</h5>
+                                <ul>
+                                    <li><i class="fas fa-paw"></i> Animais ansiosos, com medo ou estressados</li>
+                                    <li><i class="fas fa-paw"></i> Recuperação pós-cirúrgica ou de doenças</li>
+                                    <li><i class="fas fa-paw"></i> Animais idosos para melhoria da qualidade de vida</li>
+                                    <li><i class="fas fa-paw"></i> Problemas comportamentais diversos</li>
+                                    <li><i class="fas fa-paw"></i> Adaptação a mudanças de ambiente ou rotina</li>
+                                    <li><i class="fas fa-paw"></i> Preparação para procedimentos veterinários</li>
+                                    <li><i class="fas fa-paw"></i> Animais em processo de luto ou separação</li>
+                                </ul>
+                                
+                                <h5>Cuidados especiais:</h5>
+                                <p>Sempre respeitamos o espaço e vontade do animal. Se o pet não se sentir confortável, aplicamos Reiki à distância. O ambiente deve estar calmo e familiar. Os tutores podem estar presentes durante toda a sessão.</p>
+                                
+                                <p><strong>Nota importante:</strong> O Reiki Pet é sempre um complemento ao cuidado veterinário convencional, nunca um substituto. Recomendamos sempre acompanhamento veterinário para questões de saúde física.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Biomagnetismo -->
+                    <div class="terapia-card">
+                        <div class="terapia-header" onclick="toggleContent(this)">
+                            <img src="assets/biomagnetismo.png?prompt=Ilustração de ímãs terapêuticos sobre silhueta humana com campo magnético colorido, equilíbrio de pH representado por cores harmoniosas, estilo científico-espiritual" alt="Biomagnetismo" class="terapia-image">
+                            <div class="terapia-info">
+                                <h4>
+                                    Biomagnetismo
+                                    <i class="fas fa-chevron-down expand-icon"></i>
+                                </h4>
+                                <p>Terapia que utiliza ímãs de média intensidade para equilibrar o pH do organismo e restaurar a saúde através do equilíbrio magnético.</p>
+                            </div>
+                        </div>
+                        <div class="terapia-content">
+                            <div class="terapia-content-inner">
+                                <h5>O que é o Biomagnetismo?</h5>
+                                <p>O Biomagnetismo é uma terapia complementar desenvolvida pelo Dr. Isaac Goiz Durán que utiliza ímãs de média intensidade para equilibrar o pH do organismo. Baseia-se no princípio científico de que muitas doenças e desequilíbrios são causados por alterações no pH corporal, criando ambientes favoráveis para vírus, bactérias, fungos e parasitas.</p>
+                                
+                                <h5>Como funciona?</h5>
+                                <p>Os ímãs são colocados em pontos específicos do corpo, identificados através de técnicas de testagem, para neutralizar cargas energéticas alteradas. Isso cria um ambiente desfavorável para patógenos, ao mesmo tempo que fortalece o sistema imunológico natural e restaura o equilíbrio ácido-base do organismo.</p>
+                                
+                                <h5>Processo da sessão:</h5>
+                                <ul>
+                                    <li><i class="fas fa-search"></i> <strong>Rastreamento:</strong> Identificação dos pontos desequilibrados</li>
+                                    <li><i class="fas fa-magnet"></i> <strong>Aplicação:</strong> Colocação dos ímãs nos pontos específicos</li>
+                                    <li><i class="fas fa-clock"></i> <strong>Tempo:</strong> Permanência dos ímãs por 20-30 minutos</li>
+                                    <li><i class="fas fa-check"></i> <strong>Verificação:</strong> Confirmação do reequilíbrio energético</li>
+                                </ul>
+                                
+                                <h5>Benefícios comprovados:</h5>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Equilíbrio do pH corporal</li>
+                                    <li><i class="fas fa-check-circle"></i> Fortalecimento significativo do sistema imunológico</li>
+                                    <li><i class="fas fa-check-circle"></i> Melhoria da circulação sanguínea e linfática</li>
+                                    <li><i class="fas fa-check-circle"></i> Redução de inflamações e processos infecciosos</li>
+                                    <li><i class="fas fa-check-circle"></i> Alívio de dores crônicas e agudas</li>
+                                    <li><i class="fas fa-check-circle"></i> Melhoria da qualidade do sono</li>
+                                    <li><i class="fas fa-check-circle"></i> Aumento dos níveis de energia e vitalidade</li>
+                                    <li><i class="fas fa-check-circle"></i> Redução do estresse e ansiedade</li>
+                                </ul>
+                                
+                                <h5>Condições que podem ser beneficiadas:</h5>
+                                <ul>
+                                    <li><i class="fas fa-virus"></i> Infecções recorrentes</li>
+                                    <li><i class="fas fa-joint"></i> Dores articulares e musculares</li>
+                                    <li><i class="fas fa-head-side-cough"></i> Problemas respiratórios</li>
+                                    <li><i class="fas fa-heartbeat"></i> Questões circulatórias</li>
+                                    <li><i class="fas fa-brain"></i> Desequilíbrios emocionais</li>
+                                    <li><i class="fas fa-shield-alt"></i> Baixa imunidade</li>
+                                </ul>
+                                
+                                <h5>Contraindicações:</h5>
+                                <p>Pessoas com marcapasso, gestantes, pessoas com próteses metálicas no local de aplicação. Sempre realizamos uma avaliação prévia completa para garantir a segurança do tratamento.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Apometria -->
+                    <div class="terapia-card">
+                        <div class="terapia-header" onclick="toggleContent(this)">
+                            <img src="assets/apometria.png?prompt=Ilustração de desdobramento espiritual com silhuetas etéreas se separando do corpo físico, luz violeta e dourada, dimensões espirituais sobrepostas, estilo místico" alt="Apometria" class="terapia-image">
+                            <div class="terapia-info">
+                                <h4>
+                                    Apometria
+                                    <i class="fas fa-chevron-down expand-icon"></i>
+                                </h4>
+                                <p>Técnica avançada de desdobramento espiritual para tratamento de questões energéticas profundas e limpeza de traumas multidimensionais.</p>
+                            </div>
+                        </div>
+                        <div class="terapia-content">
+                            <div class="terapia-content-inner">
+                                <h5>O que é a Apometria?</h5>
+                                <p>A Apometria é uma técnica terapêutica avançada que trabalha com o desdobramento dos corpos sutis para identificar e tratar questões energéticas, traumas e bloqueios que podem estar afetando a saúde física, emocional e espiritual. Foi desenvolvida pelo Dr. Luiz Sérgio, baseando-se em conhecimentos da física quântica e espiritualidade.</p>
+                                
+                                <h5>Como funciona?</h5>
+                                <p>Através de técnicas específicas de projeção da consciência e contagem regressiva, é possível acessar diferentes níveis de consciência e corpos sutis, realizar limpezas energéticas profundas, desobsessões e curas em planos mais sutis da existência. O trabalho é realizado sempre com proteção espiritual e orientação superior.</p>
+                                
+                                <h5>Níveis de atuação:</h5>
+                                <ul>
+                                    <li><i class="fas fa-layer-group"></i> <strong>Corpo Físico:</strong> Questões de saúde e vitalidade</li>
+                                    <li><i class="fas fa-layer-group"></i> <strong>Corpo Etérico:</strong> Energia vital e chakras</li>
+                                    <li><i class="fas fa-layer-group"></i> <strong>Corpo Astral:</strong> Emoções e sentimentos</li>
+                                    <li><i class="fas fa-layer-group"></i> <strong>Corpo Mental:</strong> Pensamentos e crenças</li>
+                                    <li><i class="fas fa-layer-group"></i> <strong>Corpos Superiores:</strong> Aspectos espirituais e kármicos</li>
+                                </ul>
+                                
+                                <h5>Indicações específicas:</h5>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Traumas emocionais profundos e complexos</li>
+                                    <li><i class="fas fa-check-circle"></i> Bloqueios energéticos persistentes e inexplicáveis</li>
+                                    <li><i class="fas fa-check-circle"></i> Questões relacionadas a vidas passadas</li>
+                                    <li><i class="fas fa-check-circle"></i> Influências espirituais negativas ou obsessões</li>
+                                    <li><i class="fas fa-check-circle"></i> Padrões comportamentais limitantes repetitivos</li>
+                                    <li><i class="fas fa-check-circle"></i> Fobias e medos sem causa aparente</li>
+                                    <li><i class="fas fa-check-circle"></i> Depressão profunda de origem desconhecida</li>
+                                    <li><i class="fas fa-check-circle"></i> Vícios e compulsões resistentes</li>
+                                </ul>
+                                
+                                <h5>Processo da sessão:</h5>
+                                <p>A sessão inicia com proteção espiritual e conexão com planos superiores. O paciente é conduzido a um estado de relaxamento profundo, onde é possível acessar diferentes corpos sutis. O trabalho é realizado com muito respeito, sempre com o consentimento do paciente e orientação espiritual.</p>
+                                
+                                <h5>Benefícios esperados:</h5>
+                                <ul>
+                                    <li><i class="fas fa-star"></i> Liberação de traumas antigos e profundos</li>
+                                    <li><i class="fas fa-star"></i> Compreensão de padrões kármicos</li>
+                                    <li><i class="fas fa-star"></i> Limpeza energética multidimensional</li>
+                                    <li><i class="fas fa-star"></i> Maior clareza mental e emocional</li>
+                                    <li><i class="fas fa-star"></i> Conexão com propósito de vida</li>
+                                    <li><i class="fas fa-star"></i> Paz interior duradoura</li>
+                                </ul>
+                                
+                                <h5>Cuidados e preparação:</h5>
+                                <p>É recomendado jejum leve antes da sessão, mente aberta e receptiva, e disponibilidade emocional para processar conteúdos que possam emergir. O acompanhamento pós-sessão é fundamental para integração das experiências.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sistema Ashtariano -->
+                    <div class="terapia-card">
+                        <div class="terapia-header" onclick="toggleContent(this)">
+                            <img src="assets/sistema_ashtariano.png?prompt=Ilustração de símbolos sagrados dourados flutuando em espiral ascendente, energia cósmica violeta e dourada, formas geométricas sagradas, conexão celestial" alt="Sistema Ashtariano" class="terapia-image">
+                            <div class="terapia-info">
+                                <h4>
+                                    Sistema Ashtariano
+                                    <i class="fas fa-chevron-down expand-icon"></i>
+                                </h4>
+                                <p>Sistema de cura canalizado que trabalha com energias de alta vibração e símbolos sagrados para transformação profunda.</p>
+                            </div>
+                        </div>
+                        <div class="terapia-content">
+                            <div class="terapia-content-inner">
+                                <h5>O que é o Sistema Ashtariano?</h5>
+                                <p>O Sistema de Cura Ashtariano é um método energético canalizado que trabalha com frequências de alta vibração para promover cura e transformação em múltiplos níveis do ser. É baseado em ensinamentos canalizados de seres de luz da família Ashtar, focando na elevação consciencial e cura multidimensional.</p>
+                                
+                                <h5>Como funciona?</h5>
+                                <p>Através da canalização de energias específicas e uso de símbolos sagrados de alta vibração, o terapeuta atua como um canal purificado para transmitir essas frequências curativas cósmicas. O sistema trabalha com geometria sagrada, códigos de luz e frequências específicas para cada necessidade.</p>
+                                
+                                <h5>Símbolos e ferramentas:</h5>
+                                <ul>
+                                    <li><i class="fas fa-star"></i> <strong>Símbolos de Cura:</strong> Códigos energéticos específicos</li>
+                                    <li><i class="fas fa-star"></i> <strong>Decretos:</strong> Mantras e afirmações de poder</li>
+                                    <li><i class="fas fa-star"></i> <strong>Geometria Sagrada:</strong> Formas que amplificam a energia</li>
+                                    <li><i class="fas fa-star"></i> <strong>Cristais Específicos:</strong> Amplificadores energéticos</li>
+                                    <li><i class="fas fa-star"></i> <strong>Cores Vibracionais:</strong> Frequências cromáticas específicas</li>
+                                </ul>
+                                
+                                <h5>Benefícios únicos:</h5>
+                                <ul>
+                                    <li><i class="fas fa-rocket"></i> Elevação significativa da frequência vibracional</li>
+                                    <li><i class="fas fa-rocket"></i> Ativação de potenciais latentes e dons</li>
+                                    <li><i class="fas fa-rocket"></i> Conexão mais profunda com a essência divina</li>
+                                    <li><i class="fas fa-rocket"></i> Transmutação de padrões limitantes ancestrais</li>
+                                    <li><i class="fas fa-rocket"></i> Expansão da consciência e percepção</li>
+                                    <li><i class="fas fa-rocket"></i> Alinhamento com missão de vida</li>
+                                    <li><i class="fas fa-rocket"></i> Proteção energética avançada</li>
+                                    <li><i class="fas fa-rocket"></i> Acesso a informações akáshicas</li>
+                                </ul>
+                                
+                                <h5>Níveis do sistema:</h5>
+                                <ul>
+                                    <li><i class="fas fa-certificate"></i> <strong>Nível 1:</strong> Cura básica e proteção</li>
+                                    <li><i class="fas fa-certificate"></i> <strong>Nível 2:</strong> Trabalho emocional e mental</li>
+                                    <li><i class="fas fa-certificate"></i> <strong>Nível 3:</strong> Transformação espiritual</li>
+                                    <li><i class="fas fa-certificate"></i> <strong>Mestrado:</strong> Capacitação para ensinar</li>
+                                </ul>
+                                
+                                <h5>Indicações especiais:</h5>
+                                <ul>
+                                    <li><i class="fas fa-star-of-life"></i> Pessoas em processo de despertar espiritual</li>
+                                    <li><i class="fas fa-star-of-life"></i> Terapeutas que buscam amplificar seus dons</li>
+                                    <li><i class="fas fa-star-of-life"></i> Indivíduos com sensibilidade energética elevada</li>
+                                    <li><i class="fas fa-star-of-life"></i> Trabalhadores da luz em missão</li>
+                                    <li><i class="fas fa-star-of-life"></i> Pessoas buscando conexão cósmica</li>
+                                </ul>
+                                
+                                <h5>Processo de ativação:</h5>
+                                <p>O Sistema Ashtariano é transmitido através de iniciações energéticas específicas, onde o estudante recebe os símbolos e ativações necessárias para canalizar essas energias. Cada nível prepara para frequências mais elevadas e responsabilidades maiores.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- E.F.T. -->
+                    <div class="terapia-card">
+                        <div class="terapia-header" onclick="toggleContent(this)">
+                            <img src="assets/eft.png?prompt=Ilustração de mãos tocando pontos de acupuntura no rosto e corpo, meridianos energéticos iluminados, ondas de alívio emocional em cores suaves, técnica de liberdade emocional" alt="E.F.T." class="terapia-image">
+                            <div class="terapia-info">
+                                <h4>
+                                    E.F.T. (Emotional Freedom Technique)
+                                    <i class="fas fa-chevron-down expand-icon"></i>
+                                </h4>
+                                <p>Técnica de Liberdade Emocional que combina acupressão com psicologia energética para liberação rápida de bloqueios emocionais.</p>
+                            </div>
+                        </div>
+                        <div class="terapia-content">
+                            <div class="terapia-content-inner">
+                                <h5>O que é o E.F.T.?</h5>
+                                <p>O E.F.T. (Emotional Freedom Technique) é uma técnica revolucionária que combina elementos da acupuntura tradicional chinesa com psicologia moderna. Também conhecida como "acupuntura emocional sem agulhas", envolve toques suaves em pontos específicos do corpo enquanto se foca em questões emocionais específicas.</p>
+                                
+                                <h5>Como funciona?</h5>
+                                <p>Através de toques rítmicos (tapping) em pontos de acupuntura específicos, enquanto se verbaliza o problema emocional e afirmações positivas, o E.F.T. ajuda a liberar bloqueios energéticos e reprogramar respostas emocionais negativas. Baseia-se no princípio de que todas as emoções negativas são causadas por perturbações no sistema energético do corpo.</p>
+                                
+                                <h5>Pontos principais utilizados:</h5>
+                                <ul>
+                                    <li><i class="fas fa-hand-point-right"></i> <strong>Topo da cabeça:</strong> Clareza mental</li>
+                                    <li><i class="fas fa-hand-point-right"></i> <strong>Sobrancelha:</strong> Traumas e frustrações</li>
+                                    <li><i class="fas fa-hand-point-right"></i> <strong>Lado do olho:</strong> Raiva e ressentimento</li>
+                                    <li><i class="fas fa-hand-point-right"></i> <strong>Debaixo do olho:</strong> Ansiedade e medo</li>
+                                    <li><i class="fas fa-hand-point-right"></i> <strong>Debaixo do nariz:</strong> Vergonha e constrangimento</li>
+                                    <li><i class="fas fa-hand-point-right"></i> <strong>Queixo:</strong> Confusão e incerteza</li>
+                                    <li><i class="fas fa-hand-point-right"></i> <strong>Clavícula:</strong> Insegurança</li>
+                                    <li><i class="fas fa-hand-point-right"></i> <strong>Debaixo do braço:</strong> Culpa e não merecimento</li>
+                                </ul>
+                                
+                                <h5>Processo da sessão:</h5>
+                                <ol>
+                                    <li><strong>Identificação:</strong> Definir a questão emocional específica</li>
+                                    <li><strong>Avaliação:</strong> Medir a intensidade emocional (0-10)</li>
+                                    <li><strong>Setup:</strong> Frase de aceitação e reconhecimento</li>
+                                    <li><strong>Sequência:</strong> Tapping nos pontos específicos</li>
+                                    <li><strong>Reavaliação:</strong> Verificar mudanças na intensidade</li>
+                                    <li><strong>Repetição:</strong> Até atingir nível confortável</li>
+                                </ol>
+                                
+                                <h5>Indicações principais:</h5>
+                                <ul>
+                                    <li><i class="fas fa-heart"></i> Ansiedade e ataques de pânico</li>
+                                    <li><i class="fas fa-heart"></i> Traumas e fobias específicas</li>
+                                    <li><i class="fas fa-heart"></i> Depressão e tristeza profunda</li>
+                                    <li><i class="fas fa-heart"></i> Vícios e compulsões</li>
+                                    <li><i class="fas fa-heart"></i> Dores físicas de origem emocional</li>
+                                    <li><i class="fas fa-heart"></i> Baixa autoestima e autossabotagem</li>
+                                    <li><i class="fas fa-heart"></i> Estresse pós-traumático</li>
+                                    <li><i class="fas fa-heart"></i> Problemas de relacionamento</li>
+                                    <li><i class="fas fa-heart"></i> Bloqueios financeiros e profissionais</li>
+                                </ul>
+                                
+                                <h5>Vantagens únicas:</h5>
+                                <ul>
+                                    <li><i class="fas fa-clock"></i> <strong>Rapidez:</strong> Resultados muitas vezes imediatos</li>
+                                    <li><i class="fas fa-home"></i> <strong>Autoaplicação:</strong> Pode ser aprendido para uso pessoal</li>
+                                    <li><i class="fas fa-shield-alt"></i> <strong>Segurança:</strong> Não invasivo e sem efeitos colaterais</li>
+                                    <li><i class="fas fa-money-bill"></i> <strong>Economia:</strong> Técnica eficaz e acessível</li>
+                                    <li><i class="fas fa-users"></i> <strong>Versatilidade:</strong> Aplicável a diversas questões</li>
+                                </ul>
+                                
+                                <h5>Eficácia comprovada:</h5>
+                                <p>Estudos científicos demonstram a eficácia do E.F.T. em diversas condições, com taxas de sucesso significativas no tratamento de traumas, ansiedade, fobias e outros distúrbios emocionais. A técnica é reconhecida por organizações de saúde mental em diversos países.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Radiestesia e Práticas Oraculares -->
+            <div class="terapia-category">
+                <h3 class="category-title">
+                    <i class="fas fa-compass"></i>
+                    Radiestesia e Práticas Oraculares
+                </h3>
+                <div class="terapia-grid">
+                    <div class="terapia-card">
+                        <div class="terapia-header" onclick="toggleContent(this)">
+                            <img src="assets/radiestesia.png?prompt=Ilustração elegante de um pêndulo dourado em movimento sobre gráficos radiestésicos circulares, ondas energéticas coloridas se irradiando, varinha de radiestesia ao lado, tons de azul e dourado, estilo mystical clean" alt="Radiestesia" class="terapia-image">
+                            <div class="terapia-info">
+                                <h4>
+                                    Radiestesia
+                                    <i class="fas fa-chevron-down expand-icon"></i>
+                                </h4>
+                                <p>Arte milenar de detectar energias sutis através de instrumentos como pêndulos e varas radiestésicas para diagnóstico e harmonização.</p>
+                            </div>
+                        </div>
+                        <div class="terapia-content">
+                            <div class="terapia-content-inner">
+                                <h5>O que é a Radiestesia?</h5>
+                                <p>A Radiestesia é uma técnica milenar que utiliza instrumentos como pêndulos, varas de radiestesia e gráficos específicos para detectar energias sutis e obter informações sobre saúde, bem-estar e questões diversas. É uma prática que combina sensibilidade energética com conhecimento técnico.</p>
+                                
+                                <h5>Como funciona?</h5>
+                                <p>Através da sensibilidade desenvolvida do radiestesista e instrumentos calibrados específicos, é possível detectar e interpretar diferentes tipos de radiações e energias, tanto em pessoas quanto em ambientes. O pêndulo ou vara atua como amplificador das percepções sutis do praticante.</p>
+                                
+                                <h5>Instrumentos utilizados:</h5>
+                                <ul>
+                                    <li><i class="fas fa-circle"></i> <strong>Pêndulos:</strong> Diversos materiais para diferentes propósitos</li>
+                                    <li><i class="fas fa-ruler"></i> <strong>Varas:</strong> L-rod e outras configurações</li>
+                                    <li><i class="fas fa-chart-pie"></i> <strong>Gráficos:</strong> Bovis, Chakras, elementos, etc.</li>
+                                    <li><i class="fas fa-compass"></i> <strong>Décagono:</strong> Para medições precisas</li>
+                                    <li><i class="fas fa-map"></i> <strong>Pranchas:</strong> Anatômicas e energéticas</li>
+                                </ul>
+                                
+                                <h5>Aplicações terapêuticas:</h5>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Diagnóstico energético completo</li>
+                                    <li><i class="fas fa-check-circle"></i> Detecção de desequilíbrios nos chakras</li>
+                                    <li><i class="fas fa-check-circle"></i> Análise de compatibilidade de alimentos</li>
+                                    <li><i class="fas fa-check-circle"></i> Verificação de qualidade da água</li>
+                                    <li><i class="fas fa-check-circle"></i> Análise energética de ambientes</li>
+                                    <li><i class="fas fa-check-circle"></i> Orientação para tratamentos específicos</li>
+                                    <li><i class="fas fa-check-circle"></i> Localização de pontos energéticos</li>
+                                    <li><i class="fas fa-check-circle"></i> Medição de campos biomagnéticos</li>
+                                </ul>
+                                
+                                <h5>Técnicas específicas:</h5>
+                                <ul>
+                                    <li><i class="fas fa-wave-square"></i> <strong>Radiestesia Médica:</strong> Diagnóstico energético</li>
+                                    <li><i class="fas fa-home"></i> <strong>Radiestesia de Ambientes:</strong> Limpeza e harmonização</li>
+                                    <li><i class="fas fa-leaf"></i> <strong>Radiestesia Alimentar:</strong> Teste de compatibilidade</li>
+                                    <li><i class="fas fa-gem"></i> <strong>Radiestesia com Cristais:</strong> Seleção e programação</li>
+                                </ul>
+                                
+                                <h5>Benefícios principais:</h5>
+                                <ul>
+                                    <li><i class="fas fa-search"></i> Diagnóstico preciso e não invasivo</li>
+                                    <li><i class="fas fa-balance-scale"></i> Identificação de desequilíbrios sutis</li>
+                                    <li><i class="fas fa-compass"></i> Orientação para melhor qualidade de vida</li>
+                                    <li><i class="fas fa-shield-alt"></i> Prevenção de problemas energéticos</li>
+                                    <li><i class="fas fa-home"></i> Harmonização de espaços</li>
+                                </ul>
+                                
+                                <h5>Sessão de Radiestesia:</h5>
+                                <p>Durante a consulta, utilizamos diferentes gráficos e instrumentos para mapear o estado energético completo. Identificamos bloqueios, desequilíbrios e potenciais, fornecendo orientações específicas e personalizadas para harmonização e cura.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="terapia-card">
+                        <div class="terapia-header" onclick="toggleContent(this)">
+                            <img src="assets/cartomancia.png?prompt=Ilustração mística de cartas de tarô flutuando com símbolos esotéricos dourados, lua crescente, estrelas, cristais, energia mágica violeta e dourada ao redor, estilo místico elegante" alt="Cartomancia" class="terapia-image">
+                            <div class="terapia-info">
+                                <h4>
+                                    Cartomancia e Oráculos
+                                    <i class="fas fa-chevron-down expand-icon"></i>
+                                </h4>
+                                <p>Leitura de cartas oraculares para orientação, autoconhecimento e clareza sobre caminhos e decisões importantes da vida.</p>
+                            </div>
+                        </div>
+                        <div class="terapia-content">
+                            <div class="terapia-content-inner">
+                                <h5>O que é a Cartomancia?</h5>
+                                <p>A Cartomancia é uma prática oracular milenar que utiliza diferentes tipos de cartas (Tarô, Baralho Cigano, Oráculos diversos) para fornecer orientações, insights profundos e perspectivas esclarecedoras sobre diferentes aspectos da vida. É uma ferramenta poderosa de autoconhecimento e orientação espiritual.</p>
+                                
+                                <h5>Tipos de oráculos utilizados:</h5>
+                                <ul>
+                                    <li><i class="fas fa-star"></i> <strong>Tarô Rider-Waite:</strong> Clássico e completo</li>
+                                    <li><i class="fas fa-star"></i> <strong>Baralho Cigano (Lenormand):</strong> Objetivo e direto</li>
+                                    <li><i class="fas fa-star"></i> <strong>Cartas dos Anjos:</strong> Orientação espiritual</li>
+                                    <li><i class="fas fa-star"></i> <strong>Oráculos da Deusa:</strong> Energia feminina sagrada</li>
+                                    <li><i class="fas fa-star"></i> <strong>Cartas de Medicina:</strong> Cura e transformação</li>
+                                    <li><i class="fas fa-star"></i> <strong>Oráculos de Cristais:</strong> Energia mineral</li>
+                                    <li><i class="fas fa-star"></i> <strong>Cartas dos Chakras:</strong> Equilíbrio energético</li>
+                                </ul>
+                                
+                                <h5>Tipos de consulta oferecidos:</h5>
+                                <ul>
+                                    <li><i class="fas fa-heart"></i> <strong>Relacionamentos:</strong> Amor, família, amizades</li>
+                                    <li><i class="fas fa-briefcase"></i> <strong>Profissional:</strong> Carreira, negócios, vocação</li>
+                                    <li><i class="fas fa-coins"></i> <strong>Financeiro:</strong> Prosperidade, investimentos</li>
+                                    <li><i class="fas fa-user"></i> <strong>Autoconhecimento:</strong> Propósito, talentos, desafios</li>
+                                    <li><i class="fas fa-route"></i> <strong>Caminhos:</strong> Decisões importantes</li>
+                                    <li><i class="fas fa-clinic-medical"></i> <strong>Saúde:</strong> Aspectos energéticos</li>
+                                    <li><i class="fas fa-pray"></i> <strong>Espiritual:</strong> Evolução, missão de vida</li>
+                                </ul>
+                                
+                                <h5>Metodologia das consultas:</h5>
+                                <ul>
+                                    <li><i class="fas fa-comments"></i> <strong>Entrevista inicial:</strong> Compreensão da questão</li>
+                                    <li><i class="fas fa-hand-sparkles"></i> <strong>Preparação energética:</strong> Limpeza e proteção</li>
+                                    <li><i class="fas fa-random"></i> <strong>Embaralhamento consciente:</strong> Sintonia energética</li>
+                                    <li><i class="fas fa-eye"></i> <strong>Interpretação intuitiva:</strong> Análise profunda</li>
+                                    <li><i class="fas fa-lightbulb"></i> <strong>Orientações práticas:</strong> Conselhos aplicáveis</li>
+                                    <li><i class="fas fa-scroll"></i> <strong>Registro da consulta:</strong> Para reflexão posterior</li>
+                                </ul>
+                                
+                                <h5>Benefícios das consultas:</h5>
+                                <ul>
+                                    <li>✨ <strong>Autoconhecimento profundo</strong> e descoberta de aspectos ocultos da personalidade</li>
+                                    <li>✨ <strong>Orientação clara</strong> para tomadas de decisões importantes</li>
+                                    <li>✨ <strong>Clareza em situações confusas</strong> e momentos de incerteza</li>
+                                    <li>✨ <strong>Conexão com a intuição</strong> e desenvolvimento da percepção</li>
+                                    <li>✨ <strong>Perspectivas futuras</strong> baseadas em tendências atuais</li>
+                                    <li>✨ <strong>Compreensão de padrões</strong> repetitivos na vida</li>
+                                    <li>✨ <strong>Orientação espiritual</strong> e conexão com sabedoria superior</li>
+                                    <li>✨ <strong>Empoderamento pessoal</strong> através do conhecimento</li>
+                                </ul>
+                                
+                                <h5>Modalidades de atendimento:</h5>
+                                <ul>
+                                    <li><i class="fas fa-users"></i> <strong>Presencial:</strong> Experiência completa e energética</li>
+                                    <li><i class="fas fa-video"></i> <strong>Online:</strong> Via videoconferência com interação</li>
+                                    <li><i class="fas fa-envelope"></i> <strong>Por email:</strong> Relatório detalhado com fotos</li>
+                                    <li><i class="fas fa-phone"></i> <strong>Telefônica:</strong> Consulta por voz</li>
+                                </ul>
+                                
+                                <h5>Ética e responsabilidade:</h5>
+                                <p>Todas as consultas são realizadas com total confidencialidade, respeito e responsabilidade. O objetivo é sempre empoderar o consulente, nunca criar dependência. As orientações são sugestões baseadas na energia do momento, respeitando sempre o livre-arbítrio e a capacidade de escolha de cada pessoa.</p>
+                                
+                                <h5>Preparação para a consulta:</h5>
+                                <p>Recomendamos vir com mente aberta, questões claras (mas não é obrigatório), e disposição para receber orientações, mesmo que desafiem perspectivas atuais. A receptividade potencializa a qualidade das informações recebidas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Psicologia e Psicoterapia -->
+            <div class="terapia-category">
+                <h3 class="category-title">
+                    <i class="fas fa-brain"></i>
+                    Psicologia e Psicoterapia
+                </h3>
+                <div class="terapia-grid">
+                    <div class="terapia-card">
+                        <div class="terapia-header" onclick="toggleContent(this)">
+                            <img src="assets/psicanalise.png?prompt=Ilustração de silhueta em sessão de terapia, mente com símbolos do inconsciente emergindo, cores suaves e profundas, ambiente acolhedor de consultório" alt="Psicanálise" class="terapia-image">
+                            <div class="terapia-info">
+                                <h4>
+                                    Psicanálise
+                                    <i class="fas fa-chevron-down expand-icon"></i>
+                                </h4>
+                                <p>Abordagem terapêutica com ênfase no autoconhecimento profundo e exploração do inconsciente para compreensão de padrões e cura emocional.</p>
+                            </div>
+                        </div>
+                        <div class="terapia-content">
+                            <div class="terapia-content-inner">
+                                <h5>O que é a Psicanálise?</h5>
+                                <p>A Psicanálise é uma abordagem terapêutica desenvolvida por Sigmund Freud que busca compreender o funcionamento da mente humana através da exploração do inconsciente, dos sonhos, dos atos falhos e das associações livres. É um método profundo de investigação da psique humana.</p>
+                                
+                                <h5>Como funciona o processo?</h5>
+                                <p>Através do diálogo terapêutico em setting específico, o paciente é convidado a falar livremente sobre seus pensamentos, sentimentos e experiências, sem censura ou julgamento. Este processo permite que conteúdos inconscientes venham à tona e sejam elaborados, promovendo insight e transformação.</p>
+                                
+                                <h5>Principais conceitos trabalhados:</h5>
+                                <ul>
+                                    <li><i class="fas fa-brain"></i> <strong>Inconsciente:</strong> Conteúdos reprimidos e esquecidos</li>
+                                    <li><i class="fas fa-baby"></i> <strong>Infância:</strong> Experiências formativas fundamentais</li>
+                                    <li><i class="fas fa-masks-theater"></i> <strong>Mecanismos de Defesa:</strong> Proteções psíquicas</li>
+                                    <li><i class="fas fa-link"></i> <strong>Transferência:</strong> Relação terapêutica como espelho</li>
+                                    <li><i class="fas fa-dream"></i> <strong>Sonhos:</strong> Via régia para o inconsciente</li>
+                                    <li><i class="fas fa-repeat"></i> <strong>Compulsão à Repetição:</strong> Padrões inconscientes</li>
+                                </ul>
+                                
+                                <h5>Métodos utilizados:</h5>
+                                <ul>
+                                    <li><i class="fas fa-comments"></i> <strong>Associação Livre:</strong> Fala sem censura</li>
+                                    <li><i class="fas fa-cloud"></i> <strong>Análise dos Sonhos:</strong> Interpretação simbólica</li>
+                                    <li><i class="fas fa-search"></i> <strong>Análise de Atos Falhos:</strong> Lapsos reveladores</li>
+                                    <li><i class="fas fa-heart"></i> <strong>Análise da Transferência:</strong> Dinâmica relacional</li>
+                                    <li><i class="fas fa-user-check"></i> <strong>Análise das Resistências:</strong> Defesas psíquicas</li>
+                                </ul>
+                                
+                                <h5>Benefícios do processo psicanalítico:</h5>
+                                <ul>
+                                    <li><i class="fas fa-eye"></i> Autoconhecimento profundo e duradouro</li>
+                                    <li><i class="fas fa-puzzle-piece"></i> Compreensão de padrões comportamentais repetitivos</li>
+                                    <li><i class="fas fa-band-aid"></i> Elaboração de traumas e conflitos internos</li>
+                                    <li><i class="fas fa-unlock"></i> Resolução de sintomas neuróticos e psicossomáticos</li>
+                                    <li><i class="fas fa-seedling"></i> Desenvolvimento da personalidade e maturidade emocional</li>
+                                    <li><i class="fas fa-balance-scale"></i> Maior integração entre consciente e inconsciente</li>
+                                    <li><i class="fas fa-heart-pulse"></i> Melhoria na qualidade dos relacionamentos</li>
+                                    <li><i class="fas fa-compass"></i> Maior autenticidade e direcionamento na vida</li>
+                                </ul>
+                                
+                                <h5>Indicações específicas:</h5>
+                                <ul>
+                                    <li><i class="fas fa-sad-tear"></i> Depressão e melancolia crônica</li>
+                                    <li><i class="fas fa-anxious"></i> Ansiedade e transtornos neuróticos</li>
+                                    <li><i class="fas fa-broken-heart"></i> Dificuldades nos relacionamentos</li>
+                                    <li><i class="fas fa-question-circle"></i> Crises existenciais e de identidade</li>
+                                    <li><i class="fas fa-exclamation-triangle"></i> Traumas e lutos não elaborados</li>
+                                    <li><i class="fas fa-sync-alt"></i> Padrões comportamentais autodestrutivos</li>
+                                    <li><i class="fas fa-user-graduate"></i> Desejo de autoconhecimento profundo</li>
+                                </ul>
+                                
+                                <h5>Diferencial da abordagem:</h5>
+                                <p>A Psicanálise se diferencia por não buscar soluções rápidas ou superficiais, mas sim uma transformação estrutural da personalidade. É um processo que demanda tempo, dedicação e coragem para enfrentar aspectos ocultos de si mesmo, resultando em mudanças profundas e duradouras.</p>
+                                
+                                <h5>Duração e frequência:</h5>
+                                <p>O processo psicanalítico tradicionalmente ocorre 2-3 vezes por semana, com sessões de 50 minutos. A duração varia conforme cada caso, podendo durar de alguns meses a alguns anos, dependendo dos objetivos e da complexidade das questões trabalhadas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="terapia-card">
+                        <div class="terapia-header" onclick="toggleContent(this)">
+                            <img src="assets/tcc.png?prompt=Ilustração de cérebro com engrenagens representando pensamentos, setas circulares mostrando ciclo pensamento-emoção-comportamento, cores azuis e verdes, estilo moderno" alt="Terapia Cognitivo-Comportamental" class="terapia-image">
+                            <div class="terapia-info">
+                                <h4>
+                                    Terapia Cognitivo-Comportamental (TCC)
+                                    <i class="fas fa-chevron-down expand-icon"></i>
+                                </h4>
+                                <p>Abordagem psicoterapêutica focada na identificação e modificação de padrões de pensamento e comportamento disfuncionais de forma prática e objetiva.</p>
+                            </div>
+                        </div>
+                        <div class="terapia-content">
+                            <div class="terapia-content-inner">
+                                <h5>O que é a Terapia Cognitivo-Comportamental?</h5>
+                                <p>A TCC é uma abordagem psicoterapêutica baseada na ideia de que nossos pensamentos, sentimentos e comportamentos estão interconectados em um ciclo contínuo. Foca na identificação e modificação de padrões de pensamento disfuncionais para promover mudanças positivas no comportamento e bem-estar emocional de forma prática e eficaz.</p>
+                                
+                                <h5>Como funciona o processo terapêutico?</h5>
+                                <p>O terapeuta trabalha colaborativamente com o paciente para identificar pensamentos automáticos negativos, crenças limitantes e comportamentos disfuncionais. Através de técnicas específicas e exercícios práticos, busca-se modificar esses padrões para padrões mais adaptativos, realistas e saudáveis.</p>
+                                
+                                <h5>Princípios fundamentais:</h5>
+                                <ul>
+                                    <li><i class="fas fa-link"></i> <strong>Modelo Cognitivo:</strong> Pensamentos influenciam emoções e comportamentos</li>
+                                    <li><i class="fas fa-users"></i> <strong>Colaboração Ativa:</strong> Terapeuta e paciente trabalham juntos</li>
+                                    <li><i class="fas fa-bullseye"></i> <strong>Foco no Presente:</strong> Trabalho com questões atuais</li>
+                                    <li><i class="fas fa-chart-line"></i> <strong>Orientação para Metas:</strong> Objetivos claros e mensuráveis</li>
+                                    <li><i class="fas fa-clipboard-check"></i> <strong>Estruturação:</strong> Sessões organizadas e direcionadas</li>
+                                    <li><i class="fas fa-home"></i> <strong>Tarefas de Casa:</strong> Exercícios práticos entre sessões</li>
+                                </ul>
+                                
+                                <h5>Principais técnicas utilizadas:</h5>
+                                <ul>
+                                    <li><i class="fas fa-search"></i> <strong>Reestruturação Cognitiva:</strong> Identificação e modificação de pensamentos</li>
+                                    <li><i class="fas fa-book"></i> <strong>Registro de Pensamentos:</strong> Diário de automonitoramento</li>
+                                    <li><i class="fas fa-eye"></i> <strong>Experimentos Comportamentais:</strong> Teste de crenças na prática</li>
+                                    <li><i class="fas fa-stairs"></i> <strong>Exposição Gradual:</strong> Enfrentamento progressivo de medos</li>
+                                    <li><i class="fas fa-clock"></i> <strong>Técnicas de Relaxamento:</strong> Manejo da ansiedade</li>
+                                    <li><i class="fas fa-puzzle-piece"></i> <strong>Resolução de Problemas:</strong> Estratégias práticas</li>
+                                    <li><i class="fas fa-calendar-alt"></i> <strong>Programação de Atividades:</strong> Estruturação do dia a dia</li>
+                                </ul>
+                                
+                                <h5>Áreas de aplicação eficaz:</h5>
+                                <ul>
+                                    <li><i class="fas fa-heartbeat"></i> <strong>Transtornos de Ansiedade:</strong> Pânico, fobias, ansiedade social</li>
+                                    <li><i class="fas fa-sad-cry"></i> <strong>Depressão:</strong> Episódios depressivos e distimia</li>
+                                    <li><i class="fas fa-brain"></i> <strong>TOC:</strong> Transtorno Obsessivo-Compulsivo</li>
+                                    <li><i class="fas fa-bolt"></i> <strong>TEPT:</strong> Transtorno de Estresse Pós-Traumático</li>
+                                    <li><i class="fas fa-utensils"></i> <strong>Transtornos Alimentares:</strong> Bulimia, compulsão alimentar</li>
+                                    <li><i class="fas fa-wine-bottle"></i> <strong>Dependências:</strong> Substâncias e comportamentais</li>
+                                    <li><i class="fas fa-bed"></i> <strong>Transtornos do Sono:</strong> Insônia e pesadelos</li>
+                                </ul>
+                                
+                                <h5>Benefícios comprovados:</h5>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Redução significativa de sintomas de ansiedade e depressão</li>
+                                    <li><i class="fas fa-check-circle"></i> Melhoria substancial no controle emocional</li>
+                                    <li><i class="fas fa-check-circle"></i> Desenvolvimento de habilidades práticas de enfrentamento</li>
+                                    <li><i class="fas fa-check-circle"></i> Aumento da autoestima e autoconfiança</li>
+                                    <li><i class="fas fa-check-circle"></i> Melhoria significativa nos relacionamentos interpessoais</li>
+                                    <li><i class="fas fa-check-circle"></i> Maior flexibilidade de pensamento</li>
+                                    <li><i class="fas fa-check-circle"></i> Desenvolvimento de autonomia e independência</li>
+                                    <li><i class="fas fa-check-circle"></i> Prevenção de recaídas através de ferramentas aprendidas</li>
+                                </ul>
+                                
+                                <h5>Estrutura das sessões:</h5>
+                                <ol>
+                                    <li><strong>Check-in:</strong> Revisão da semana e humor atual</li>
+                                    <li><strong>Revisão de Tarefa:</strong> Discussão dos exercícios realizados</li>
+                                    <li><strong>Agenda:</strong> Definição de tópicos da sessão</li>
+                                    <li><strong>Trabalho Principal:</strong> Técnicas e intervenções específicas</li>
+                                    <li><strong>Resumo:</strong> Síntese dos pontos principais</li>
+                                    <li><strong>Nova Tarefa:</strong> Exercícios para a próxima semana</li>
+                                    <li><strong>Feedback:</strong> Impressões sobre a sessão</li>
+                                </ol>
+                                
+                                <h5>Duração e resultados:</h5>
+                                <p>A TCC é tipicamente uma terapia de curto a médio prazo, com duração média de 12-20 sessões, podendo variar conforme a complexidade do caso. Resultados positivos frequentemente são observados já nas primeiras sessões, com melhora progressiva ao longo do tratamento.</p>
+                                
+                                <h5>Vantagens da abordagem:</h5>
+                                <ul>
+                                    <li><i class="fas fa-rocket"></i> <strong>Eficácia Comprovada:</strong> Ampla base científica</li>
+                                    <li><i class="fas fa-clock"></i> <strong>Resultados Rápidos:</strong> Melhoras em poucas sessões</li>
+                                    <li><i class="fas fa-tools"></i> <strong>Ferramentas Práticas:</strong> Técnicas aplicáveis no dia a dia</li>
+                                    <li><i class="fas fa-graduation-cap"></i> <strong>Educativa:</strong> Ensina habilidades permanentes</li>
+                                    <li><i class="fas fa-shield-alt"></i> <strong>Preventiva:</strong> Reduz risco de recaídas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre Celso - Terapeuta Holístico</h2>
+            <div class="sobre-content">
+                <div class="sobre-image">
+                    <img src="assets/4896cfVZ8iJo00SJoe_th.jpeg" alt="Celso - Terapeuta Holístico" loading="lazy">
+                </div>
+                <div class="sobre-text">
+                    <h3>Uma Jornada de Cura e Transformação</h3>
+                    <p>Com mais de uma década dedicada às terapias integrativas, minha missão é proporcionar um espaço seguro e acolhedor onde cada pessoa possa encontrar seu equilíbrio natural e despertar seu potencial de autocura.</p>
+                    
+                    <p>Minha formação abrange diversas modalidades terapêuticas, sempre com foco na integração entre corpo, mente e espírito. Acredito que cada ser humano possui em si a capacidade natural de cura e transformação, cabendo ao terapeuta facilitar esse processo com conhecimento, sensibilidade e amor.</p>
+                    
+                    <p>Trabalho com uma abordagem personalizada, reconhecendo que cada pessoa é única e merece um cuidado individual. Seja através de terapias energéticas, práticas oraculares ou acompanhamento psicológico, meu objetivo é sempre o mesmo: promover bem-estar integral e duradouro.</p>
+                    
+                    <div class="sobre-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h4>Formação Especializada</h4>
+                            <p>Certificações em múltiplas terapias integrativas e psicologia</p>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-heart"></i>
+                            <h4>Abordagem Humanizada</h4>
+                            <p>Atendimento personalizado com foco no ser integral</p>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-leaf"></i>
+                            <h4>Métodos Naturais</h4>
+                            <p>Técnicas não invasivas respeitando os ritmos naturais</p>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-users"></i>
+                            <h4>Experiência Comprovada</h4>
+                            <p>Mais de 10 anos auxiliando pessoas em sua jornada de cura</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos Section -->
+    <section id="depoimentos" class="depoimentos">
+        <div class="container">
+            <h2 class="section-title">Depoimentos dos Clientes</h2>
+            <div class="depoimentos-grid">
+                <!-- Depoimento 1 - Stephani -->
+                <div class="depoimento-card">
+                    <div class="cliente-foto">S</div>
+                    <div class="cliente-nome">Stephani</div>
+                    <div class="cliente-local">Florida, EUA</div>
+                    <div class="cliente-tratamento">Alinhamento energético e Cartomancia</div>
+                    <div class="estrelas">⭐⭐⭐⭐⭐</div>
+                    <div class="depoimento-texto">
+                        Eu tive uma experiência incrível com o Celso. Ele é um terapeuta holístico excepcional, que une conhecimento e sensibilidade para proporcionar um atendimento único e transformador. Durante as sessões, senti um profundo cuidado e atenção, o que me ajudou a encontrar equilíbrio físico, emocional e mental. As técnicas que ele utiliza, combinando abordagens tradicionais e holísticas, me proporcionaram clareza e um novo olhar sobre meus desafios pessoais. Recomendo fortemente o Celso para quem busca uma abordagem terapêutica personalizada e eficaz. Sua dedicação e empatia fazem toda a diferença no processo de cura e autoconhecimento.
+                    </div>
+                </div>
+
+                <!-- Depoimento 2 - Anne -->
+                <div class="depoimento-card">
+                    <div class="cliente-foto">A</div>
+                    <div class="cliente-nome">Anne</div>
+                    <div class="cliente-local">Londres, Inglaterra</div>
+                    <div class="cliente-tratamento">Reiki, alinhamento de chakras, biomagnetismo e Cartomancia</div>
+                    <div class="estrelas">⭐⭐⭐⭐⭐</div>
+                    <div class="depoimento-texto">
+                        Recomendo 100% o trabalho do Celso! Um ótimo profissional que é super atento aos seus pacientes. Eu senti uma melhora enorme depois do tratamento que fiz com ele. Com certeza, farei mais tratamentos com ele no futuro. A combinação de técnicas que ele oferece é realmente transformadora e os resultados são visíveis desde as primeiras sessões.
+                    </div>
+                </div>
+
+                <!-- Depoimento 3 - Andressa -->
+                <div class="depoimento-card">
+                    <div class="cliente-foto">A</div>
+                    <div class="cliente-nome">Andressa</div>
+                    <div class="cliente-local">São Paulo, SP</div>
+                    <div class="cliente-tratamento">Radiestesia, Reiki, alinhamento energético e Cartomancia</div>
+                    <div class="estrelas">⭐⭐⭐⭐⭐</div>
+                    <div class="depoimento-texto">
+                        Celso é um terapeuta incrível, super atencioso, com uma abordagem muito clara e métodos sensacionais, um ótimo profissional, recomendo super! O diagnóstico energético que ele fez através da radiestesia foi surpreendentemente preciso, e as sessões de Reiki me trouxeram um alívio que eu não sentia há anos.
+                    </div>
+                </div>
+
+                <!-- Depoimento 4 - Elisabete -->
+                <div class="depoimento-card">
+                    <div class="cliente-foto">E</div>
+                    <div class="cliente-nome">Elisabete</div>
+                    <div class="cliente-local">Araraquara, SP</div>
+                    <div class="cliente-tratamento">Reiki Usui e Reiki elemental</div>
+                    <div class="estrelas">⭐⭐⭐⭐⭐</div>
+                    <div class="depoimento-texto">
+                        Procurei o Celso para sessões de Reiki como parte do meu tratamento para depressão e ansiedade, e desde o início me senti acolhida e em paz. O ambiente é tranquilo e a abordagem dele é muito sensível e respeitosa. As sessões me ajudaram a reduzir a ansiedade, melhorar o sono e me sentir mais equilibrada emocionalmente. Recomendo de coração o trabalho dele.
+                    </div>
+                </div>
+
+                <!-- Depoimento 5 - Maria Clara -->
+                <div class="depoimento-card">
+                    <div class="cliente-foto">M</div>
+                    <div class="cliente-nome">Maria Clara</div>
+                    <div class="cliente-local">Ribeirão Preto, SP</div>
+                    <div class="cliente-tratamento">Biomagnetismo e E.F.T.</div>
+                    <div class="estrelas">⭐⭐⭐⭐⭐</div>
+                    <div class="depoimento-texto">
+                        Fiz um tratamento com biomagnetismo para dores crônicas que me acompanhavam há anos, e os resultados foram impressionantes. Além disso, as sessões de E.F.T. me ajudaram a lidar com traumas emocionais antigos. O Celso tem uma abordagem muito profissional e ao mesmo tempo acolhedora. Realmente mudou minha qualidade de vida!
+                    </div>
+                </div>
+
+                <!-- Depoimento 6 - Roberto -->
+                <div class="depoimento-card">
+                    <div class="cliente-foto">R</div>
+                    <div class="cliente-nome">Roberto</div>
+                    <div class="cliente-local">São Carlos, SP</div>
+                    <div class="cliente-tratamento">Apometria e Sistema Ashtariano</div>
+                    <div class="estrelas">⭐⭐⭐⭐⭐</div>
+                    <div class="depoimento-texto">
+                        Estava passando por um momento muito difícil em minha vida, com bloqueios que pareciam impossíveis de superar. As sessões de Apometria e o trabalho com o Sistema Ashtariano foram transformadores. Consegui compreender e liberar padrões antigos que me limitavam. O Celso conduziu todo o processo com muito cuidado e conhecimento profundo.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Canais Section -->
+    <section id="canais" class="canais">
+        <div class="container">
+            <h2 class="section-title">Nossos Canais</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem; color: #555;">Conecte-se conosco através dos nossos diferentes canais de atendimento e conteúdo</p>
+            
+            <div class="canais-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <!-- Canal Lunara Tarô -->
+                        <div class="canal-card featured">
+                            <div class="canal-icon">
+                                <i class="fas fa-magic"></i>
+                            </div>
+                            <div class="canal-content">
+                                <h3>Lunara Tarô</h3>
+                                <p>Consultas de Tarô online com interpretações personalizadas</p>
+                                <div class="canal-features">
+                                    <span class="feature-tag">Tiragem Gratuita</span>
+                                    <span class="feature-tag">Consultas Online</span>
+                                </div>
+                                <a href="https://bit.ly/lunarataro" target="_blank" class="btn btn-canal">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Acessar Plataforma
+                                </a>
+                            </div>
+                            <div class="canal-preview">
+                                <div class="tarot-cards">
+                                    <div class="card card-1"></div>
+                                    <div class="card card-2"></div>
+                                    <div class="card card-3"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Canal YouTube -->
+                        <div class="canal-card">
+                            <div class="canal-icon youtube">
+                                <i class="fab fa-youtube"></i>
+                            </div>
+                            <div class="canal-content">
+                                <h3>Canal YouTube</h3>
+                                <p>Vídeos sobre terapias, meditações guiadas e dicas de bem-estar</p>
+                                <div class="canal-features">
+                                    <span class="feature-tag">Meditações</span>
+                                    <span class="feature-tag">Tutoriais</span>
+                                </div>
+                                <a href="https://www.youtube.com/channel/UCw5BZJvLIlDGLGQh8uy0wYw/" target="_blank" class="btn btn-canal">
+                                    <i class="fab fa-youtube"></i>
+                                    Inscrever-se
+                                </a>
+                            </div>
+                            <div class="canal-preview">
+                                <div class="video-preview">
+                                    <div class="play-button">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- WhatsApp -->
+                        <div class="canal-card">
+                            <div class="canal-icon whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="canal-content">
+                                <h3>WhatsApp</h3>
+                                <p>Atendimento direto e agendamento de consultas</p>
+                                <div class="canal-features">
+                                    <span class="feature-tag">Atendimento</span>
+                                    <span class="feature-tag">Agendamento</span>
+                                </div>
+                                <a href="https://wa.me/5516997934558" target="_blank" class="btn btn-canal">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Conversar
+                                </a>
+                            </div>
+                            <div class="canal-preview">
+                                <div class="whatsapp-chat">
+                                    <div class="chat-bubble">Olá! Como posso ajudar?</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" onclick="moveCarousel(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next" onclick="moveCarousel(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contato-grid">
+                <div class="contato-info">
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <img src="assets/B0Xd0JpZuzOL9b3cDHk7E.png" alt="Lunara Terapias - Logo" style="max-width: 80px; height: auto; filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2)); display: block; margin: 0 auto 1rem auto;">
+                        <h2 style="color: #c9b37c; font-size: 1.5rem; font-weight: 600; margin: 0;">Lunara Terapias</h2>
+                    </div>
+                    <h3>Informações de Contato</h3>
+                    <div class="contato-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>celsot.holistics@gmail.com</span>
+                    </div>
+                    <div class="contato-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+55 (16) 99793-4558</span>
+                    </div>
+                    <div class="contato-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Araraquara, SP - Brasil</span>
+                    </div>
+                    <div class="contato-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Segunda a Sexta: 8h às 18h<br>Sábados: 8h às 14h</span>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://bit.ly/lunarataro" target="_blank" title="Lunara Tarô" onclick="trackEvent('social_click', {platform: 'lunara_taro', location: 'contact_section'})">
+                            <i class="fas fa-magic"></i>
+                        </a>
+                        <a href="https://linktr.ee/celsot.holistica" target="_blank" title="Linktree" onclick="trackEvent('social_click', {platform: 'linktree', location: 'contact_section'})">
+                            <i class="fas fa-link"></i>
+                        </a>
+                        <a href="javascript:void(0)" onclick="openWhatsAppWithMessage()" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCw5BZJvLIlDGLGQh8uy0wYw/" target="_blank" title="YouTube" onclick="trackEvent('social_click', {platform: 'youtube', location: 'contact_section'})">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+
+                    </div>
+                </div>
+                
+                <div class="contato-form">
+                    <h3>Envie uma Mensagem</h3>
+                    <form id="contatoForm">
+                        <div class="form-group">
+                            <label for="from_name">Nome Completo *:</label>
+                            <input type="text" id="from_name" name="from_name" required placeholder="Seu nome completo">
+                        </div>
+                        <div class="form-group">
+                            <label for="from_email">E-mail *:</label>
+                            <input type="email" id="from_email" name="from_email" required placeholder="seu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone/WhatsApp:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(16) 99999-9999">
+                        </div>
+                        <div class="form-group">
+                            <label for="terapia_interesse">Terapia de Interesse:</label>
+                            <select id="terapia_interesse" name="terapia_interesse" style="color: #333;">
+                                <option value="" style="color: #999;">Selecione uma opção</option>
+                                <option value="reiki_usui">Reiki Usui</option>
+                                <option value="reiki_elemental">Reiki Elemental</option>
+                                <option value="reiki_pet">Reiki Pet</option>
+                                <option value="biomagnetismo">Biomagnetismo</option>
+                                <option value="apometria">Apometria</option>
+                                <option value="sistema_ashtariano">Sistema Ashtariano</option>
+                                <option value="eft">E.F.T.</option>
+                                <option value="radiestesia">Radiestesia</option>
+                                <option value="cartomancia">Cartomancia</option>
+                                <option value="psicanalise">Psicanálise</option>
+                                <option value="tcc">TCC</option>
+                                <option value="consulta_geral">Consulta Geral</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem *:</label>
+                            <textarea id="message" name="message" required placeholder="Conte-me um pouco sobre o que você está buscando e como posso ajudá-lo..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-form">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                        </button>
+                        <div id="statusMsg" class="status-indicator" style="display: none; margin-top: 15px; padding: 12px; border-radius: 8px; text-align: center;"></div>
+                        <a href="https://wa.me/5516997934558?text=Ol%C3%A1!%20Acabei%20de%20visitar%20o%20site%20da%20Lunara%20Terapias%20e%20gostaria%20de%20conversar%20sobre%20as%20terapias%20oferecidas." 
+                           target="_blank" class="btn btn-secondary whatsapp-btn" onclick="trackEvent('whatsapp_click', {source: 'contact_form_button'})">
+                            <i class="fab fa-whatsapp"></i> Ou fale conosco pelo WhatsApp
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Lunara Terapias</h4>
+                    <p>Promovendo equilíbrio, cura e transformação através das terapias integrativas desde 2013.</p>
+                    <p><strong>CRP:</strong> 06/95.331</p>
+                    <p><strong>CRTP:</strong> 2.446</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Serviços</h4>
+                    <a href="#terapias">Terapias Energéticas</a>
+                    <a href="#terapias">Práticas Oraculares</a>
+                    <a href="#terapias">Psicologia & Psicoterapia</a>
+                    <a href="#contato">Consultoria Energética</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Araraquara, SP</p>
+                    <p><i class="fas fa-phone"></i> (16) 99793-4558</p>
+                    <p><i class="fas fa-envelope"></i> celsot.holistics@gmail.com</p>
+                    <a href="https://bit.ly/lunarataro" target="_blank">🔮 Lunara Tarô</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Links Úteis</h4>
+                    <a href="#sobre">Sobre o Terapeuta</a>
+                    <a href="#depoimentos">Depoimentos</a>
+                    <a href="https://linktr.ee/celsot.holistica" target="_blank">Linktree</a>
+                    <a href="#contato">Agendar Consulta</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Lunara Terapias. Todos os direitos reservados.</p>
+                <p>Desenvolvido com ❤️ para promover bem-estar e equilíbrio</p>
+                <p><small>Este site utiliza cookies para melhorar sua experiência. As terapias oferecidas são complementares e não substituem tratamento médico.</small></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Status Testing System
+        function showStatus(message, isError = false) {
+            const indicator = document.getElementById('statusIndicator');
+            indicator.textContent = message;
+            indicator.className = isError ? 'status-indicator error' : 'status-indicator success';
+            indicator.style.display = 'block';
+            
+            setTimeout(() => {
+                indicator.style.display = 'none';
+            }, 4000);
+        }
+
+        // Google Analytics Event Tracking
+        function trackEvent(eventName, parameters = {}) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, parameters);
+                console.log(`📊 GA Event: ${eventName}`, parameters);
+            }
+        }
+
+        // Track page load
+        window.addEventListener('load', function() {
+            trackEvent('page_loaded', {
+                page_title: document.title,
+                page_location: window.location.href,
+                user_agent: navigator.userAgent
+            });
+        });
+
+        // Comprehensive system testing
+        window.addEventListener('load', function() {
+            let testsPassed = 0;
+            let totalTests = 10;
+
+            // Test 1: EmailJS library loaded
+            if (typeof emailjs !== 'undefined') {
+                testsPassed++;
+                console.log('✅ EmailJS library loaded');
+            } else {
+                console.error('❌ EmailJS library not loaded');
+            }
+
+            // Test 2: WhatsApp function exists
+            if (typeof openWhatsAppWithMessage === 'function') {
+                testsPassed++;
+                console.log('✅ WhatsApp function available');
+            } else {
+                console.error('❌ WhatsApp function not available');
+            }
+
+            // Test 3: Form elements exist
+            const form = document.getElementById('contatoForm');
+            if (form) {
+                testsPassed++;
+                console.log('✅ Contact form found');
+            } else {
+                console.error('❌ Contact form not found');
+            }
+
+            // Test 4: Depoimentos content
+            const depoimentos = document.querySelectorAll('.depoimento-card');
+            if (depoimentos.length >= 4) {
+                testsPassed++;
+                console.log(`✅ ${depoimentos.length} testimonials found`);
+            } else {
+                console.error('❌ Missing testimonials');
+            }
+
+            // Test 5: Social links
+            const linktreeLink = document.querySelector('a[href*="linktr.ee"]');
+            if (linktreeLink) {
+                testsPassed++;
+                console.log('✅ Linktree link found');
+            } else {
+                console.error('❌ Linktree link not found');
+            }
+
+            // Test 6: Therapy images
+            const therapyImages = document.querySelectorAll('.terapia-image');
+            if (therapyImages.length >= 7) {
+                testsPassed++;
+                console.log('✅ Therapy images loaded');
+            } else {
+                console.error('❌ Missing therapy images');
+            }
+
+            // Test 7: Google Analytics
+            if (typeof gtag === 'function') {
+                testsPassed++;
+                console.log('✅ Google Analytics configured');
+            } else {
+                console.log('⚠️ Google Analytics not configured');
+            }
+
+            // Test 8: Navigation menu
+            const navLinks = document.querySelectorAll('.nav-link');
+            if (navLinks.length >= 5) {
+                testsPassed++;
+                console.log('✅ Navigation menu complete');
+            } else {
+                console.error('❌ Navigation menu incomplete');
+            }
+
+            // Test 9: Therapy expansion functionality
+            const therapyCards = document.querySelectorAll('.terapia-card');
+            if (therapyCards.length >= 8) {
+                testsPassed++;
+                console.log('✅ All therapy cards present');
+            } else {
+                console.error('❌ Missing therapy cards');
+            }
+
+            // Test 10: Responsive elements
+            const hamburger = document.querySelector('.hamburger');
+            if (hamburger) {
+                testsPassed++;
+                console.log('✅ Mobile menu available');
+            } else {
+                console.error('❌ Mobile menu not found');
+            }
+
+            // Show final result (only in console, not to user)
+            const percentage = (testsPassed / totalTests * 100).toFixed(0);
+            console.log(`🔍 System Status: ${testsPassed}/${totalTests} tests passed (${percentage}%)`);
+            
+            // Only show status if there are critical errors (less than 50% working)
+            if (testsPassed < totalTests * 0.5) {
+                showStatus(`❌ Problemas críticos detectados. Contate o suporte.`, true);
+            }
+        });
+
+        // Mobile menu toggle with accessibility
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            
+            // Update ARIA attributes for accessibility
+            const isActive = navMenu.classList.contains('active');
+            hamburger.setAttribute('aria-expanded', isActive);
+            navMenu.setAttribute('aria-hidden', !isActive);
+            
+            trackEvent('mobile_menu_toggle', { is_open: isActive });
+        });
+
+        // Handle hamburger keyboard navigation
+        hamburger.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                hamburger.click();
+            }
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                navMenu.setAttribute('aria-hidden', 'true');
+            });
+        });
+
+        // Enhanced smooth scrolling with offset for fixed header
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    trackEvent('navigation_click', {
+                        target_section: this.getAttribute('href'),
+                        source: 'internal_link'
+                    });
+                }
+            });
+        });
+
+        // Enhanced toggle content functionality
+        function toggleContent(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('.expand-icon');
+            const terapiaName = element.querySelector('h4').textContent.trim();
+            const isOpening = !content.classList.contains('active');
+            
+            // Close other open cards in the same category
+            const category = element.closest('.terapia-category');
+            const openCards = category.querySelectorAll('.terapia-content.active');
+            openCards.forEach(card => {
+                if (card !== content) {
+                    card.classList.remove('active');
+                    const otherIcon = card.previousElementSibling.querySelector('.expand-icon');
+                    if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            if (isOpening) {
+                content.classList.add('active');
+                icon.style.transform = 'rotate(180deg)';
+                
+                trackEvent('therapy_expanded', {
+                    therapy_name: terapiaName,
+                    category: category.querySelector('.category-title').textContent.trim()
+                });
+            } else {
+                content.classList.remove('active');
+                icon.style.transform = 'rotate(0deg)';
+                trackEvent('therapy_collapsed', {
+                    therapy_name: terapiaName
+                });
+            }
+        }
+
+        // Initialize EmailJS
+        (function() {
+            emailjs.init("RF_SmtXIYxnb8plsM");
+            console.log('✅ EmailJS initialized successfully');
+            console.log('📧 Service ID configured: service_jg22i2i');
+            console.log('📋 Template ID configured: template_contact');
+        })();
+
+        // Enhanced contact form submission
+        document.getElementById('contatoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const status = document.getElementById('statusMsg');
+            const submitButton = e.target.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+            
+            // Show loading state
+            status.style.display = 'block';
+            status.textContent = '📤 Enviando mensagem...';
+            status.className = 'status-indicator sending';
+            submitButton.innerHTML = '<span class="loading"></span> Enviando...';
+            submitButton.disabled = true;
+
+            // Prepare form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Store message for WhatsApp integration
+            localStorage.setItem('lastContactMessage', JSON.stringify(data));
+
+            // Send email using EmailJS
+            console.log('📤 Attempting to send email...');
+            console.log('📧 Using Service ID: service_jg22i2i');
+            console.log('📋 Using Template ID: template_contact');
+            
+            emailjs.sendForm("service_jg22i2i", "template_contact", this)
+                .then(() => {
+                    status.textContent = '✅ Mensagem enviada com sucesso!';
+                    status.className = 'status-indicator success';
+                    showStatus('✅ Email enviado com sucesso!', false);
+                    
+                    // Track successful form submission
+                    trackEvent('form_submitted', {
+                        form_type: 'contact_form',
+                        success: true,
+                        therapy_interest: data.terapia_interesse || 'not_specified',
+                        has_phone: !!data.phone
+                    });
+                    
+                    // Reset form
+                    this.reset();
+                    
+                    // Show success message with next steps
+                    setTimeout(() => {
+                        status.innerHTML = '🎉 Mensagem enviada! Em breve entraremos em contato. <br><small>Você também pode nos chamar no WhatsApp para uma resposta mais rápida.</small>';
+                    }, 2000);
+                    
+                    // Hide status after 8 seconds
+                    setTimeout(() => {
+                        status.style.display = 'none';
+                    }, 8000);
+                })
+                .catch((error) => {
+                    status.textContent = '❌ Erro ao enviar. Tente novamente ou use o WhatsApp.';
+                    status.className = 'status-indicator error';
+                    showStatus('❌ Erro ao enviar email', true);
+                    console.error('❌ Erro EmailJS detalhado:', error);
+                    console.error('📧 Service ID:', "service_jg22i2i");
+                    console.error('📋 Template ID:', "template_contact");
+                    
+                    // Track form submission error
+                    trackEvent('form_submitted', {
+                        form_type: 'contact_form',
+                        success: false,
+                        error_message: error.text || 'Unknown error'
+                    });
+                    
+                    // Hide status after 6 seconds
+                    setTimeout(() => {
+                        status.style.display = 'none';
+                    }, 6000);
+                })
+                .finally(() => {
+                    // Restore button state
+                    submitButton.innerHTML = originalButtonText;
+                    submitButton.disabled = false;
+                });
+        });
+
+        // Enhanced WhatsApp integration
+        function openWhatsAppWithMessage() {
+            const lastMessage = localStorage.getItem('lastContactMessage');
+            if (lastMessage) {
+                const data = JSON.parse(lastMessage);
+                const terapiaText = data.terapia_interesse ? ` Tenho interesse em: ${data.terapia_interesse}.` : '';
+                const phoneText = data.phone ? ` Meu telefone: ${data.phone}.` : '';
+                const whatsappMessage = encodeURIComponent(`Olá! Sou ${data.from_name}.${terapiaText}${phoneText} ${data.message}`);
+                const whatsappLink = `https://wa.me/5516997934558?text=${whatsappMessage}`;
+                window.open(whatsappLink, '_blank');
+                showStatus('✅ WhatsApp aberto com sua mensagem', false);
+                
+                // Track WhatsApp click with form data
+                trackEvent('whatsapp_clicked', {
+                    source: 'form_data',
+                    user_name: data.from_name,
+                    has_therapy_interest: !!data.terapia_interesse,
+                    message_length: data.message ? data.message.length : 0
+                });
+            } else {
+                // Default WhatsApp message
+                const whatsappLink = `https://wa.me/5516997934558?text=${encodeURIComponent('Olá! Visitei o site da Lunara Terapias e gostaria de saber mais sobre os tratamentos oferecidos.')}`;
+                window.open(whatsappLink, '_blank');
+                showStatus('✅ WhatsApp aberto', false);
+                
+                // Track WhatsApp click without form data
+                trackEvent('whatsapp_clicked', {
+                    source: 'direct_click',
+                    message_type: 'default'
+                });
+            }
+        }
+
+        // Header scroll effect with performance optimization
+        let ticking = false;
+        function updateHeader() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(44, 85, 48, 0.95)';
+                header.style.backdropFilter = 'blur(15px)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #2c5530 0%, #4a7c59 100%)';
+                header.style.backdropFilter = 'blur(10px)';
+            }
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateHeader);
+                ticking = true;
+            }
+        });
+
+        // Scroll to top functionality
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            trackEvent('scroll_to_top_clicked');
+        }
+
+        // Show/hide scroll to top button
+        window.addEventListener('scroll', () => {
+            const scrollTopBtn = document.querySelector('.scroll-top');
+            if (window.scrollY > 500) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        // Enhanced form validation
+        function validateForm() {
+            const form = document.getElementById('contatoForm');
+            const inputs = form.querySelectorAll('input[required], textarea[required]');
+            let isValid = true;
+
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    input.style.borderColor = '#dc3545';
+                    input.style.backgroundColor = 'rgba(220, 53, 69, 0.1)';
+                    isValid = false;
+                } else {
+                    input.style.borderColor = 'rgba(201, 179, 124, 0.5)';
+                    input.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                }
+            });
+
+            // Email validation
+            const emailInput = form.querySelector('input[type="email"]');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailInput && emailInput.value && !emailRegex.test(emailInput.value)) {
+                emailInput.style.borderColor = '#dc3545';
+                emailInput.style.backgroundColor = 'rgba(220, 53, 69, 0.1)';
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        // Real-time form validation
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('#contatoForm input, #contatoForm textarea, #contatoForm select').forEach(input => {
+                // Remove any conflicting event listeners first
+                input.removeEventListener('blur', validateForm);
+                input.removeEventListener('input', validateForm);
+                
+                // Add proper event listeners
+                input.addEventListener('blur', function() {
+                    if (this.hasAttribute('required') && !this.value.trim()) {
+                        this.style.borderColor = '#dc3545';
+                        this.style.backgroundColor = 'rgba(220, 53, 69, 0.1)';
+                    } else if (this.value.trim()) {
+                        this.style.borderColor = 'rgba(201, 179, 124, 0.5)';
+                        this.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                    }
+                });
+                
+                input.addEventListener('input', function() {
+                    if (this.value.trim()) {
+                        this.style.borderColor = 'rgba(201, 179, 124, 0.5)';
+                        this.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                    }
+                });
+
+                input.addEventListener('focus', function() {
+                    this.style.borderColor = '#c9b37c';
+                    this.style.backgroundColor = 'white';
+                });
+            });
+        });
+
+        // Lazy loading for images
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src || img.src;
+                        img.classList.remove('lazy');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Track scroll depth
+        let maxScroll = 0;
+        window.addEventListener('scroll', () => {
+            const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+            if (scrollPercent > maxScroll) {
+                maxScroll = scrollPercent;
+                if (maxScroll % 25 === 0) { // Track at 25%, 50%, 75%, 100%
+                    trackEvent('scroll_depth', { percent: maxScroll });
+                }
+            }
+        });
+
+        // Track time on page
+        const startTime = Date.now();
+        window.addEventListener('beforeunload', () => {
+            const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+            trackEvent('time_on_page', { seconds: timeOnPage });
+        });
+
+        // Error handling
+        window.addEventListener('error', (e) => {
+            console.error('Script error:', e.error);
+            trackEvent('javascript_error', {
+                message: e.message,
+                filename: e.filename,
+                line: e.lineno
+            });
+        });
+
+        // Performance monitoring
+        window.addEventListener('load', () => {
+            if ('performance' in window) {
+                const perfData = performance.getEntriesByType('navigation')[0];
+                trackEvent('page_performance', {
+                    load_time: Math.round(perfData.loadEventEnd - perfData.fetchStart),
+                    dom_content_loaded: Math.round(perfData.domContentLoadedEventEnd - perfData.fetchStart)
+                });
+            }
+        });
+
+        // Accessibility improvements
+        document.addEventListener('keydown', (e) => {
+            // Skip to main content with Tab key
+            if (e.key === 'Tab' && !e.shiftKey && document.activeElement === document.body) {
+                const mainContent = document.querySelector('#home');
+                if (mainContent) {
+                    mainContent.focus();
+                    e.preventDefault();
+                }
+            }
+        });
+
+        // Initialize accessibility features
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add skip link
+            const skipLink = document.createElement('a');
+            skipLink.href = '#home';
+            skipLink.className = 'sr-only';
+            skipLink.textContent = 'Pular para o conteúdo principal';
+            skipLink.addEventListener('focus', function() {
+                this.classList.remove('sr-only');
+            });
+            skipLink.addEventListener('blur', function() {
+                this.classList.add('sr-only');
+            });
+            document.body.insertBefore(skipLink, document.body.firstChild);
+
+            // Set initial ARIA attributes
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.setAttribute('aria-controls', 'nav-menu');
+            navMenu.setAttribute('aria-hidden', 'true');
+            navMenu.id = 'nav-menu';
+        });
+
+        // Preload critical resources
+        const criticalResources = [
+            'assets/B0Xd0JpZuzOL9b3cDHk7E.png', // Logo oficial Lunara
+            'assets/IjRU3NSCqXYVq6Np.webp', // Radiestesia image
+            'assets/e0WMzfbK1S2gvsCO.webp' // Cartomancia image
+        ];
+
+        criticalResources.forEach(src => {
+            const link = document.createElement('link');
+            link.rel = 'prefetch';
+            link.href = src;
+            document.head.appendChild(link);
+        });
+
+        // Carousel functionality (sem movimento automático)
+        let currentSlideIndex = 0;
+        const totalSlides = 3;
+
+        function moveCarousel(direction) {
+            currentSlideIndex += direction;
+            
+            if (currentSlideIndex >= totalSlides) {
+                currentSlideIndex = 0;
+            } else if (currentSlideIndex < 0) {
+                currentSlideIndex = totalSlides - 1;
+            }
+            
+            updateCarousel();
+        }
+
+        function currentSlide(n) {
+            currentSlideIndex = n - 1;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            const track = document.querySelector('.carousel-track');
+            const dots = document.querySelectorAll('.dot');
+            
+            if (track) {
+                // Calculate translateX based on current slide
+                // Each slide is 33.333% of the track width
+                const translateX = -currentSlideIndex * 33.333;
+                track.style.transform = `translateX(${translateX}%)`;
+            }
+            
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlideIndex);
+            });
+        }
+
+        // Initialize carousel (apenas inicialização, sem auto-slide)
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCarousel();
+        });
+
+        console.log('🚀 Lunara Terapias website loaded successfully!');
+        console.log('📞 WhatsApp: +55 (16) 99793-4558');
+        console.log('📧 Email: celsot.holistics@gmail.com');
+        console.log('🌐 Developed with ❤️ for healing and transformation');
+    </script>
+</body>
+</html>
